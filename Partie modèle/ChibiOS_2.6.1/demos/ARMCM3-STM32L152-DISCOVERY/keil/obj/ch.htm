@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\obj\ch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\obj\ch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Nov 06 10:14:28 2013
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Nov 06 14:08:21 2013
 <BR><P>
 <H3>Maximum Stack Usage =        160 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,7 +12,7 @@ ThreadComRcv &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[13b]">__user_initial_stackheap</a>
+ <LI><a href="#[13c]">__user_initial_stackheap</a>
  <LI><a href="#[41]">_port_exit_from_isr</a>
 </UL>
 </UL>
@@ -29,6 +29,7 @@ Function Pointers
  <LI><a href="#[3]">Reset_Handler</a> from cstartup.o(.text) referenced from vectors.o(RESET)
  <LI><a href="#[d]">SVCallVector</a> from chcore_v7m.o(.text) referenced from vectors.o(RESET)
  <LI><a href="#[11]">SysTickVector</a> from chcore_v7m.o(.text) referenced from vectors.o(RESET)
+ <LI><a href="#[51]">ThreadAltitude</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[4e]">ThreadComRcv</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[4f]">ThreadComSnd</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[50]">ThreadRoulisTangage</a> from main.o(.text) referenced from main.o(.text)
@@ -83,233 +84,233 @@ Function Pointers
  <LI><a href="#[3c]">VectorE8</a> from vectors.o(.text) referenced from vectors.o(RESET)
  <LI><a href="#[3d]">VectorEC</a> from vectors.o(.text) referenced from vectors.o(RESET)
  <LI><a href="#[3e]">VectorF0</a> from vectors.o(.text) referenced from vectors.o(RESET)
- <LI><a href="#[5b]">__main</a> from __main.o(!!!main) referenced from cstartup.o(.text)
- <LI><a href="#[a7]">_idle_thread</a> from chsys.o(.text) referenced from chsys.o(.text)
+ <LI><a href="#[5c]">__main</a> from __main.o(!!!main) referenced from cstartup.o(.text)
+ <LI><a href="#[a8]">_idle_thread</a> from chsys.o(.text) referenced from chsys.o(.text)
  <LI><a href="#[41]">_port_exit_from_isr</a> from chcoreasm_v7m.o(.text) referenced from chcore_v7m.o(.text)
  <LI><a href="#[40]">_port_switch_from_isr</a> from chcoreasm_v7m.o(.text) referenced from chcore_v7m.o(.text)
  <LI><a href="#[44]">_port_thread_start</a> from chcoreasm_v7m.o(.text) referenced from chthreads.o(.text)
- <LI><a href="#[52]">_printf_input_char</a> from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
- <LI><a href="#[51]">_sputc</a> from _sputc.o(.text) referenced from noretval__2sprintf.o(.text)
+ <LI><a href="#[53]">_printf_input_char</a> from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
+ <LI><a href="#[52]">_sputc</a> from _sputc.o(.text) referenced from noretval__2sprintf.o(.text)
  <LI><a href="#[4a]">adc_lld_serve_rx_interrupt</a> from adc_lld.o(.text) referenced from adc_lld.o(.text)
  <LI><a href="#[42]">chCoreAlloc</a> from chmemcore.o(.text) referenced from chheap.o(.text)
- <LI><a href="#[56]">get</a> from serial.o(.text) referenced from serial.o(.constdata)
- <LI><a href="#[58]">gett</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[57]">get</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[59]">gett</a> from serial.o(.text) referenced from serial.o(.constdata)
  <LI><a href="#[4d]">i2c_lld_safety_timeout</a> from i2c_lld.o(.text) referenced from i2c_lld.o(.text)
  <LI><a href="#[4b]">i2c_lld_serve_rx_end_irq</a> from i2c_lld.o(.text) referenced from i2c_lld.o(.text)
  <LI><a href="#[4c]">i2c_lld_serve_tx_end_irq</a> from i2c_lld.o(.text) referenced from i2c_lld.o(.text)
  <LI><a href="#[47]">notify2</a> from serial_lld.o(.text) referenced from serial_lld.o(.text)
- <LI><a href="#[55]">put</a> from serial.o(.text) referenced from serial.o(.constdata)
- <LI><a href="#[57]">putt</a> from serial.o(.text) referenced from serial.o(.constdata)
- <LI><a href="#[54]">read</a> from serial.o(.text) referenced from serial.o(.constdata)
- <LI><a href="#[5a]">readt</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[56]">put</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[58]">putt</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[55]">read</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[5b]">readt</a> from serial.o(.text) referenced from serial.o(.constdata)
  <LI><a href="#[48]">spi_lld_serve_rx_interrupt</a> from spi_lld.o(.text) referenced from spi_lld.o(.text)
  <LI><a href="#[49]">spi_lld_serve_tx_interrupt</a> from spi_lld.o(.text) referenced from spi_lld.o(.text)
  <LI><a href="#[45]">tm_start</a> from tm.o(.text) referenced from tm.o(.text)
  <LI><a href="#[46]">tm_stop</a> from tm.o(.text) referenced from tm.o(.text)
  <LI><a href="#[43]">wakeup</a> from chschd.o(.text) referenced from chschd.o(.text)
- <LI><a href="#[53]">write</a> from serial.o(.text) referenced from serial.o(.constdata)
- <LI><a href="#[59]">writet</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[54]">write</a> from serial.o(.text) referenced from serial.o(.constdata)
+ <LI><a href="#[5a]">writet</a> from serial.o(.text) referenced from serial.o(.constdata)
 </UL>
 <P>
 <H3>
 Global Symbols
 </H3>
-<P><STRONG><a name="[5b]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
-<BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[5c]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[5c]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<P><STRONG><a name="[5d]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[5e]"></a>__scatterload_rt2</STRONG> (Thumb, 44 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+<P><STRONG><a name="[5f]"></a>__scatterload_rt2</STRONG> (Thumb, 44 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[118]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[119]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[119]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[11a]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[5f]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+<P><STRONG><a name="[60]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[11a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[11b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
-<P><STRONG><a name="[60]"></a>_printf_d</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_d.o(.ARM.Collect$$_printf_percent$$00000009))
+<P><STRONG><a name="[61]"></a>_printf_d</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_d.o(.ARM.Collect$$_printf_percent$$00000009))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
 <LI>Call Chain = _printf_d &rArr; _printf_int_dec &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
 </UL>
 
-<P><STRONG><a name="[114]"></a>_printf_percent</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+<P><STRONG><a name="[115]"></a>_printf_percent</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 
-<P><STRONG><a name="[62]"></a>_printf_s</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_s.o(.ARM.Collect$$_printf_percent$$00000014))
+<P><STRONG><a name="[63]"></a>_printf_s</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_s.o(.ARM.Collect$$_printf_percent$$00000014))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = _printf_s &rArr; _printf_string &rArr; _printf_cs_common &rArr; _printf_str &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_string
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_string
 </UL>
 
-<P><STRONG><a name="[11b]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
+<P><STRONG><a name="[11c]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
 
-<P><STRONG><a name="[65]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
+<P><STRONG><a name="[66]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[11c]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[11d]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[11d]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002A))
+<P><STRONG><a name="[11e]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002A))
 
-<P><STRONG><a name="[11e]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[11f]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[11f]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[120]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[120]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[121]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[121]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[122]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[122]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[123]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[123]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[124]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[124]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[125]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[125]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000008))
+<P><STRONG><a name="[126]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000008))
 
-<P><STRONG><a name="[126]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000F))
+<P><STRONG><a name="[127]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000F))
 
-<P><STRONG><a name="[127]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[128]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[128]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[129]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[129]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[12a]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[12a]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[12b]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[12b]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[12c]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[12c]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
+<P><STRONG><a name="[12d]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
 
-<P><STRONG><a name="[12d]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[12e]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[12e]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[12f]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[12f]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[130]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[6a]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
+<P><STRONG><a name="[6b]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[130]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
+<P><STRONG><a name="[131]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
 
-<P><STRONG><a name="[131]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
+<P><STRONG><a name="[132]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
 
-<P><STRONG><a name="[132]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[133]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[133]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
+<P><STRONG><a name="[134]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
 
-<P><STRONG><a name="[134]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000003))
+<P><STRONG><a name="[135]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000003))
 
-<P><STRONG><a name="[135]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B))
+<P><STRONG><a name="[136]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B))
 
-<P><STRONG><a name="[5d]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry.o(.ARM.Collect$$rtentry$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
+<P><STRONG><a name="[5e]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry.o(.ARM.Collect$$rtentry$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[136]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[137]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
-<P><STRONG><a name="[137]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry5.o(.ARM.Collect$$rtentry$$00000005))
+<P><STRONG><a name="[138]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry5.o(.ARM.Collect$$rtentry$$00000005))
 
-<P><STRONG><a name="[64]"></a>__rt_entry_li</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000A))
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
+<P><STRONG><a name="[65]"></a>__rt_entry_li</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000A))
+<BR><BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[138]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[139]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
-<P><STRONG><a name="[66]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
+<P><STRONG><a name="[67]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; i2cStart &rArr; i2c_lld_start &rArr; dmaStreamAllocate &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[139]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[13a]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
-<P><STRONG><a name="[117]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
+<P><STRONG><a name="[118]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[69]"></a>__rt_exit_ls</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000003))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
+<P><STRONG><a name="[6a]"></a>__rt_exit_ls</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000003))
+<BR><BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[13a]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[13b]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
-<P><STRONG><a name="[6b]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+<P><STRONG><a name="[6c]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__early_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, board.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
+<P><STRONG><a name="[6e]"></a>__early_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, board.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_clock_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
 </UL>
 
-<P><STRONG><a name="[c8]"></a>boardInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, board.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<P><STRONG><a name="[c9]"></a>boardInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, board.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
 <P><STRONG><a name="[3]"></a>Reset_Handler</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, cstartup.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__early_init
+<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__early_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[13b]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cstartup.o(.text), UNUSED)
+<P><STRONG><a name="[13c]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cstartup.o(.text), UNUSED)
 
-<P><STRONG><a name="[9d]"></a>_port_switch</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, chcoreasm_v7m.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleBehind
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleAhead
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoReschedule
+<P><STRONG><a name="[9e]"></a>_port_switch</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, chcoreasm_v7m.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleBehind
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleAhead
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoReschedule
 </UL>
 
 <P><STRONG><a name="[44]"></a>_port_thread_start</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, chcoreasm_v7m.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _port_thread_start &rArr; chThdExit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> chthreads.o(.text)
 </UL>
 <P><STRONG><a name="[40]"></a>_port_switch_from_isr</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, chcoreasm_v7m.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _port_switch_from_isr &rArr; chSchDoReschedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoReschedule
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoReschedule
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> chcore_v7m.o(.text)
 </UL>
 <P><STRONG><a name="[41]"></a>_port_exit_from_isr</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, chcoreasm_v7m.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> chcore_v7m.o(.text)
 </UL>
-<P><STRONG><a name="[104]"></a>port_halt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, chcore.o(.text))
+<P><STRONG><a name="[105]"></a>port_halt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, chcore.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_tx_end_irq
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_rx_end_irq
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_serve_tx_interrupt
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_serve_rx_interrupt
 </UL>
 
-<P><STRONG><a name="[100]"></a>_port_irq_epilogue</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, chcore_v7m.o(.text))
+<P><STRONG><a name="[101]"></a>_port_irq_epilogue</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, chcore_v7m.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC8
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC4
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC0
@@ -329,19 +330,19 @@ Global Symbols
 <P><STRONG><a name="[11]"></a>SysTickVector</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, chcore_v7m.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SysTickVector &rArr; chSysTimerHandlerI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysTimerHandlerI
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysTimerHandlerI
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[d]"></a>SVCallVector</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, chcore_v7m.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[72]"></a>_port_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, chcore_v7m.o(.text))
+<P><STRONG><a name="[73]"></a>_port_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, chcore_v7m.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _port_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicSetSystemHandlerPriority
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicSetSystemHandlerPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
 </UL>
 
 <P><STRONG><a name="[7]"></a>BusFaultVector</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, vectors.o(.text))
@@ -473,1276 +474,1285 @@ Global Symbols
 <P><STRONG><a name="[3e]"></a>VectorF0</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, vectors.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[74]"></a>_unhandled_exception</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, vectors.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_unhandled_exception
+<P><STRONG><a name="[75]"></a>_unhandled_exception</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, vectors.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_unhandled_exception
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_unhandled_exception
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_unhandled_exception
 </UL>
 
-<P><STRONG><a name="[102]"></a>nvicEnableVector</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, nvic.o(.text))
+<P><STRONG><a name="[103]"></a>nvicEnableVector</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, nvic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = nvicEnableVector
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_start
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_start
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_start
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_start
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
 </UL>
 
-<P><STRONG><a name="[103]"></a>nvicDisableVector</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, nvic.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_stop
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_stop
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
+<P><STRONG><a name="[104]"></a>nvicDisableVector</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, nvic.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_stop
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_stop
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
 </UL>
 
-<P><STRONG><a name="[73]"></a>nvicSetSystemHandlerPriority</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, nvic.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_init
+<P><STRONG><a name="[74]"></a>nvicSetSystemHandlerPriority</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, nvic.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_init
 </UL>
 
-<P><STRONG><a name="[13c]"></a>chThdAddRef</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chdynamic.o(.text), UNUSED)
+<P><STRONG><a name="[13d]"></a>chThdAddRef</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chdynamic.o(.text), UNUSED)
 
-<P><STRONG><a name="[75]"></a>chThdRelease</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, chdynamic.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chPoolFree
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
+<P><STRONG><a name="[76]"></a>chThdRelease</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, chdynamic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chPoolFree
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdWait
-</UL>
-
-<P><STRONG><a name="[78]"></a>chThdCreateFromHeap</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, chdynamic.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateI
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdWait
 </UL>
 
-<P><STRONG><a name="[7c]"></a>chThdCreateFromMemoryPool</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, chdynamic.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateI
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chPoolAlloc
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<P><STRONG><a name="[79]"></a>chThdCreateFromHeap</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, chdynamic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateI
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
 </UL>
 
-<P><STRONG><a name="[13d]"></a>chEvtRegisterMask</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
-
-<P><STRONG><a name="[13e]"></a>chEvtUnregister</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
-
-<P><STRONG><a name="[13f]"></a>chEvtGetAndClearEvents</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
-
-<P><STRONG><a name="[140]"></a>chEvtAddEvents</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
-
-<P><STRONG><a name="[7e]"></a>chEvtSignalI</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[7d]"></a>chThdCreateFromMemoryPool</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, chdynamic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateI
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chPoolAlloc
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
 </UL>
 
-<P><STRONG><a name="[80]"></a>chEvtBroadcastFlagsI</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, chevents.o(.text))
+<P><STRONG><a name="[13e]"></a>chEvtRegisterMask</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+
+<P><STRONG><a name="[13f]"></a>chEvtUnregister</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+
+<P><STRONG><a name="[140]"></a>chEvtGetAndClearEvents</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+
+<P><STRONG><a name="[141]"></a>chEvtAddEvents</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+
+<P><STRONG><a name="[7f]"></a>chEvtSignalI</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+</UL>
+
+<P><STRONG><a name="[81]"></a>chEvtBroadcastFlagsI</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, chevents.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = chEvtBroadcastFlagsI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorD8
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdRequestDataI
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdRequestDataI
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
 </UL>
 
-<P><STRONG><a name="[141]"></a>chEvtGetAndClearFlags</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+<P><STRONG><a name="[142]"></a>chEvtGetAndClearFlags</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
 
-<P><STRONG><a name="[81]"></a>chEvtSignal</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[82]"></a>chEvtSignal</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 
-<P><STRONG><a name="[83]"></a>chEvtBroadcastFlags</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[84]"></a>chEvtBroadcastFlags</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 
-<P><STRONG><a name="[142]"></a>chEvtGetAndClearFlagsI</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
+<P><STRONG><a name="[143]"></a>chEvtGetAndClearFlagsI</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chevents.o(.text), UNUSED)
 
-<P><STRONG><a name="[143]"></a>chEvtDispatch</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, chevents.o(.text), UNUSED)
+<P><STRONG><a name="[144]"></a>chEvtDispatch</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, chevents.o(.text), UNUSED)
 
-<P><STRONG><a name="[84]"></a>chEvtWaitOne</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-</UL>
-
-<P><STRONG><a name="[86]"></a>chEvtWaitAny</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<P><STRONG><a name="[85]"></a>chEvtWaitOne</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
 
-<P><STRONG><a name="[87]"></a>chEvtWaitAll</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<P><STRONG><a name="[87]"></a>chEvtWaitAny</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
 
-<P><STRONG><a name="[88]"></a>chEvtWaitOneTimeout</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<P><STRONG><a name="[88]"></a>chEvtWaitAll</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
 
-<P><STRONG><a name="[8a]"></a>chEvtWaitAnyTimeout</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<P><STRONG><a name="[89]"></a>chEvtWaitOneTimeout</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
 
-<P><STRONG><a name="[8b]"></a>chEvtWaitAllTimeout</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<P><STRONG><a name="[8b]"></a>chEvtWaitAnyTimeout</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
 
-<P><STRONG><a name="[8c]"></a>_heap_init</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, chheap.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<P><STRONG><a name="[8c]"></a>chEvtWaitAllTimeout</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, chevents.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
 
-<P><STRONG><a name="[8e]"></a>chHeapInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chheap.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
+<P><STRONG><a name="[8d]"></a>_heap_init</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, chheap.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
 </UL>
 
-<P><STRONG><a name="[79]"></a>chHeapAlloc</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, chheap.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
-</UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
+<P><STRONG><a name="[8f]"></a>chHeapInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chheap.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
 </UL>
 
-<P><STRONG><a name="[77]"></a>chHeapFree</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, chheap.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<P><STRONG><a name="[7a]"></a>chHeapAlloc</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, chheap.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
-</UL>
-
-<P><STRONG><a name="[91]"></a>chHeapStatus</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, chheap.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
 </UL>
 
-<P><STRONG><a name="[a5]"></a>_core_init</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chmemcore.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<P><STRONG><a name="[78]"></a>chHeapFree</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, chheap.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
 </UL>
 
-<P><STRONG><a name="[144]"></a>chCoreAllocI</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, chmemcore.o(.text), UNUSED)
+<P><STRONG><a name="[92]"></a>chHeapStatus</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, chheap.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+</UL>
+
+<P><STRONG><a name="[a6]"></a>_core_init</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chmemcore.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+</UL>
+
+<P><STRONG><a name="[145]"></a>chCoreAllocI</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, chmemcore.o(.text), UNUSED)
 
 <P><STRONG><a name="[42]"></a>chCoreAlloc</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, chmemcore.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> chheap.o(.text)
 </UL>
-<P><STRONG><a name="[145]"></a>chCoreStatus</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmemcore.o(.text), UNUSED)
+<P><STRONG><a name="[146]"></a>chCoreStatus</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmemcore.o(.text), UNUSED)
 
-<P><STRONG><a name="[146]"></a>chPoolInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
+<P><STRONG><a name="[147]"></a>chPoolInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
 
-<P><STRONG><a name="[147]"></a>chPoolFreeI</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
+<P><STRONG><a name="[148]"></a>chPoolFreeI</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
 
-<P><STRONG><a name="[76]"></a>chPoolFree</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
+<P><STRONG><a name="[77]"></a>chPoolFree</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, chmempools.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
 </UL>
 
-<P><STRONG><a name="[148]"></a>chPoolLoadArray</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, chmempools.o(.text), UNUSED)
+<P><STRONG><a name="[149]"></a>chPoolLoadArray</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, chmempools.o(.text), UNUSED)
 
-<P><STRONG><a name="[149]"></a>chPoolAllocI</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, chmempools.o(.text), UNUSED)
+<P><STRONG><a name="[14a]"></a>chPoolAllocI</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, chmempools.o(.text), UNUSED)
 
-<P><STRONG><a name="[7d]"></a>chPoolAlloc</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, chmempools.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
+<P><STRONG><a name="[7e]"></a>chPoolAlloc</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, chmempools.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
 </UL>
 
-<P><STRONG><a name="[8d]"></a>chMtxInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmtx.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapInit
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_heap_init
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiObjectInit
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcObjectInit
+<P><STRONG><a name="[8e]"></a>chMtxInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chmtx.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapInit
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_heap_init
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiObjectInit
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcObjectInit
 </UL>
 
-<P><STRONG><a name="[92]"></a>chMtxLockS</STRONG> (Thumb, 210 bytes, Stack size 16 bytes, chmtx.o(.text))
+<P><STRONG><a name="[93]"></a>chMtxLockS</STRONG> (Thumb, 210 bytes, Stack size 16 bytes, chmtx.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = chMtxLockS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
 </UL>
 
-<P><STRONG><a name="[8f]"></a>chMtxLock</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, chmtx.o(.text))
+<P><STRONG><a name="[90]"></a>chMtxLock</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, chmtx.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = chMtxLock &rArr; chMtxLockS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapStatus
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiAcquireBus
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cAcquireBus
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcAcquireBus
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapStatus
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiAcquireBus
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cAcquireBus
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcAcquireBus
 </UL>
 
-<P><STRONG><a name="[14a]"></a>chMtxTryLockS</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chmtx.o(.text), UNUSED)
+<P><STRONG><a name="[14b]"></a>chMtxTryLockS</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chmtx.o(.text), UNUSED)
 
-<P><STRONG><a name="[14b]"></a>chMtxTryLock</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, chmtx.o(.text), UNUSED)
+<P><STRONG><a name="[14c]"></a>chMtxTryLock</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, chmtx.o(.text), UNUSED)
 
-<P><STRONG><a name="[90]"></a>chMtxUnlock</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, chmtx.o(.text))
+<P><STRONG><a name="[91]"></a>chMtxUnlock</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, chmtx.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = chMtxUnlock &rArr; chSchWakeupS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapStatus
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReleaseBus
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cReleaseBus
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcReleaseBus
-</UL>
-
-<P><STRONG><a name="[93]"></a>chMtxUnlockS</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, chmtx.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapStatus
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapFree
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chHeapAlloc
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReleaseBus
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cReleaseBus
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcReleaseBus
 </UL>
 
-<P><STRONG><a name="[94]"></a>chMtxUnlockAll</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, chmtx.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[94]"></a>chMtxUnlockS</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, chmtx.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 
-<P><STRONG><a name="[e0]"></a>chIQInit</STRONG> (Thumb, 32 bytes, Stack size 4 bytes, chqueues.o(.text))
+<P><STRONG><a name="[95]"></a>chMtxUnlockAll</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, chmtx.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+</UL>
+
+<P><STRONG><a name="[e1]"></a>chIQInit</STRONG> (Thumb, 32 bytes, Stack size 4 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = chIQInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
 </UL>
 
-<P><STRONG><a name="[95]"></a>chIQResetI</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chqueues.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[96]"></a>chIQResetI</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, chqueues.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
 </UL>
 
-<P><STRONG><a name="[96]"></a>chIQPutI</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, chqueues.o(.text))
+<P><STRONG><a name="[97]"></a>chIQPutI</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = chIQPutI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
 </UL>
 
-<P><STRONG><a name="[97]"></a>chIQGetTimeout</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, chqueues.o(.text))
+<P><STRONG><a name="[98]"></a>chIQGetTimeout</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = chIQGetTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gett
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gett
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get
 </UL>
 
-<P><STRONG><a name="[98]"></a>chIQReadTimeout</STRONG> (Thumb, 148 bytes, Stack size 40 bytes, chqueues.o(.text))
+<P><STRONG><a name="[99]"></a>chIQReadTimeout</STRONG> (Thumb, 148 bytes, Stack size 40 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = chIQReadTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readt
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readt
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComSnd
 </UL>
 
-<P><STRONG><a name="[e1]"></a>chOQInit</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, chqueues.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
+<P><STRONG><a name="[e2]"></a>chOQInit</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, chqueues.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
 </UL>
 
-<P><STRONG><a name="[99]"></a>chOQResetI</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, chqueues.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<P><STRONG><a name="[9a]"></a>chOQResetI</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, chqueues.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
 </UL>
 
-<P><STRONG><a name="[9a]"></a>chOQPutTimeout</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, chqueues.o(.text))
+<P><STRONG><a name="[9b]"></a>chOQPutTimeout</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = chOQPutTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putt
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put
+<BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putt
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put
 </UL>
 
-<P><STRONG><a name="[9b]"></a>chOQGetI</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, chqueues.o(.text))
+<P><STRONG><a name="[9c]"></a>chOQGetI</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = chOQGetI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorD8
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdRequestDataI
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdRequestDataI
 </UL>
 
-<P><STRONG><a name="[9c]"></a>chOQWriteTimeout</STRONG> (Thumb, 146 bytes, Stack size 40 bytes, chqueues.o(.text))
+<P><STRONG><a name="[9d]"></a>chOQWriteTimeout</STRONG> (Thumb, 146 bytes, Stack size 40 bytes, chqueues.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = chOQWriteTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writet
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writet
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComRcv
 </UL>
 
-<P><STRONG><a name="[a3]"></a>_scheduler_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, chschd.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<P><STRONG><a name="[a4]"></a>_scheduler_init</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, chschd.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
 </UL>
 
-<P><STRONG><a name="[7f]"></a>chSchReadyI</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chschd.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExitS
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQResetI
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQPutI
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQResetI
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockAll
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlags
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignal
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignalI
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockS
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
+<P><STRONG><a name="[80]"></a>chSchReadyI</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, chschd.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExitS
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQResetI
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQPutI
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQResetI
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockAll
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlags
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignal
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignalI
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockS
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_rx_end_irq
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_safety_timeout
 <LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vector88
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_serve_rx_interrupt
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_serve_rx_interrupt
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversionI
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversionI
 </UL>
 
-<P><STRONG><a name="[85]"></a>chSchGoSleepS</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, chschd.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<P><STRONG><a name="[86]"></a>chSchGoSleepS</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, chschd.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdWait
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExitS
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAll
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAny
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitOne
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReceive
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSend
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiExchange
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiIgnore
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcConvert
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdWait
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExitS
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAll
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAny
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitOne
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLockS
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdExit
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReceive
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSend
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiExchange
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiIgnore
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcConvert
 </UL>
 
-<P><STRONG><a name="[89]"></a>chSchGoSleepTimeoutS</STRONG> (Thumb, 100 bytes, Stack size 40 bytes, chschd.o(.text))
+<P><STRONG><a name="[8a]"></a>chSchGoSleepTimeoutS</STRONG> (Thumb, 100 bytes, Stack size 40 bytes, chschd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleepUntil
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleep
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAllTimeout
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAnyTimeout
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitOneTimeout
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleepUntil
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleep
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAllTimeout
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitAnyTimeout
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtWaitOneTimeout
 </UL>
 
-<P><STRONG><a name="[7b]"></a>chSchWakeupS</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, chschd.o(.text))
+<P><STRONG><a name="[7c]"></a>chSchWakeupS</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, chschd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = chSchWakeupS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
-<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdResume
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversion
-</UL>
-
-<P><STRONG><a name="[a0]"></a>chSchDoRescheduleAhead</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdResume
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversion
 </UL>
 
-<P><STRONG><a name="[82]"></a>chSchRescheduleS</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSetPriority
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockAll
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlags
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignal
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
+<P><STRONG><a name="[a1]"></a>chSchDoRescheduleAhead</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
 
-<P><STRONG><a name="[a1]"></a>chSchDoRescheduleBehind</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<P><STRONG><a name="[83]"></a>chSchRescheduleS</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdYield
+<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSetPriority
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlockAll
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlags
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtSignal
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
 </UL>
 
-<P><STRONG><a name="[70]"></a>chSchDoReschedule</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, chschd.o(.text))
+<P><STRONG><a name="[a2]"></a>chSchDoRescheduleBehind</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, chschd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdYield
+</UL>
+
+<P><STRONG><a name="[71]"></a>chSchDoReschedule</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, chschd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = chSchDoReschedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_switch_from_isr
 </UL>
 
-<P><STRONG><a name="[a7]"></a>_idle_thread</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chsys.o(.text))
+<P><STRONG><a name="[a8]"></a>_idle_thread</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, chsys.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> chsys.o(.text)
 </UL>
-<P><STRONG><a name="[a2]"></a>chSysInit</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, chsys.o(.text))
+<P><STRONG><a name="[a3]"></a>chSysInit</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, chsys.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = chSysInit &rArr; chThdCreateStatic &rArr; chSchWakeupS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_vt_init
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_thread_init
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scheduler_init
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_core_init
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_heap_init
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_init
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_vt_init
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_thread_init
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scheduler_init
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_core_init
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_heap_init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[71]"></a>chSysTimerHandlerI</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, chsys.o(.text))
+<P><STRONG><a name="[72]"></a>chSysTimerHandlerI</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, chsys.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = chSysTimerHandlerI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickVector
 </UL>
 
-<P><STRONG><a name="[a6]"></a>_thread_init</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, chthreads.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<P><STRONG><a name="[a7]"></a>_thread_init</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, chthreads.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
 </UL>
 
-<P><STRONG><a name="[7a]"></a>chThdCreateI</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
+<P><STRONG><a name="[7b]"></a>chThdCreateI</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromMemoryPool
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateFromHeap
 </UL>
 
-<P><STRONG><a name="[a8]"></a>chThdCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, chthreads.o(.text))
+<P><STRONG><a name="[a9]"></a>chThdCreateStatic</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, chthreads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = chThdCreateStatic &rArr; chSchWakeupS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[a9]"></a>chThdSetPriority</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[aa]"></a>chThdResume</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<P><STRONG><a name="[aa]"></a>chThdSetPriority</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
 </UL>
 
-<P><STRONG><a name="[14c]"></a>chThdTerminate</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, chthreads.o(.text), UNUSED)
+<P><STRONG><a name="[ab]"></a>chThdResume</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+</UL>
 
-<P><STRONG><a name="[ab]"></a>chThdSleep</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, chthreads.o(.text))
+<P><STRONG><a name="[14d]"></a>chThdTerminate</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, chthreads.o(.text), UNUSED)
+
+<P><STRONG><a name="[ac]"></a>chThdSleep</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, chthreads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = chThdSleep &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[ac]"></a>chThdSleepUntil</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>chThdYield</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleBehind
+<P><STRONG><a name="[ad]"></a>chThdSleepUntil</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
 </UL>
 
-<P><STRONG><a name="[ae]"></a>chThdExitS</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<P><STRONG><a name="[ae]"></a>chThdYield</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchDoRescheduleBehind
 </UL>
 
-<P><STRONG><a name="[6f]"></a>chThdExit</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, chthreads.o(.text))
+<P><STRONG><a name="[af]"></a>chThdExitS</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+</UL>
+
+<P><STRONG><a name="[70]"></a>chThdExit</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, chthreads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = chThdExit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_thread_start
 </UL>
 
-<P><STRONG><a name="[af]"></a>chThdWait</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, chthreads.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<P><STRONG><a name="[b0]"></a>chThdWait</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, chthreads.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdRelease
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
 
-<P><STRONG><a name="[a4]"></a>_vt_init</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, chvt.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<P><STRONG><a name="[a5]"></a>_vt_init</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, chvt.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
 </UL>
 
-<P><STRONG><a name="[9e]"></a>chVTSetI</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, chvt.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
+<P><STRONG><a name="[9f]"></a>chVTSetI</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, chvt.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
 </UL>
 
-<P><STRONG><a name="[9f]"></a>chVTResetI</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, chvt.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
+<P><STRONG><a name="[a0]"></a>chVTResetI</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, chvt.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepTimeoutS
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
 </UL>
 
-<P><STRONG><a name="[14d]"></a>chTimeIsWithin</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, chvt.o(.text), UNUSED)
+<P><STRONG><a name="[14e]"></a>chTimeIsWithin</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, chvt.o(.text), UNUSED)
 
-<P><STRONG><a name="[b0]"></a>adcInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, adc.o(.text))
+<P><STRONG><a name="[b1]"></a>adcInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = adcInit &rArr; adc_lld_init &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
-</UL>
-
-<P><STRONG><a name="[b2]"></a>adcObjectInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, adc.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[b3]"></a>adcStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start
+<P><STRONG><a name="[b3]"></a>adcObjectInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, adc.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_init
 </UL>
 
-<P><STRONG><a name="[b5]"></a>adcStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop
+<P><STRONG><a name="[b4]"></a>adcStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start
 </UL>
 
-<P><STRONG><a name="[b7]"></a>adcStartConversionI</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
+<P><STRONG><a name="[b6]"></a>adcStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop
 </UL>
 
-<P><STRONG><a name="[b9]"></a>adcStartConversion</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
+<P><STRONG><a name="[b8]"></a>adcStartConversionI</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
 </UL>
 
-<P><STRONG><a name="[ba]"></a>adcStopConversion</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop_conversion
+<P><STRONG><a name="[ba]"></a>adcStartConversion</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
 </UL>
 
-<P><STRONG><a name="[bc]"></a>adcStopConversionI</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop_conversion
+<P><STRONG><a name="[bb]"></a>adcStopConversion</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchWakeupS
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop_conversion
 </UL>
 
-<P><STRONG><a name="[bd]"></a>adcConvert</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
+<P><STRONG><a name="[bd]"></a>adcStopConversionI</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop_conversion
 </UL>
 
-<P><STRONG><a name="[be]"></a>adcAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<P><STRONG><a name="[be]"></a>adcConvert</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start_conversion
 </UL>
 
-<P><STRONG><a name="[bf]"></a>adcReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<P><STRONG><a name="[bf]"></a>adcAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
 </UL>
 
-<P><STRONG><a name="[c0]"></a>halInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, hal.o(.text))
+<P><STRONG><a name="[c0]"></a>adcReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, adc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+</UL>
+
+<P><STRONG><a name="[c1]"></a>halInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, hal.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = halInit &rArr; tmInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boardInit
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmInit
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiInit
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdInit
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmInit
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_lld_init
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_init
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInit
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boardInit
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmInit
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiInit
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdInit
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_lld_init
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_init
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[14e]"></a>halIsCounterWithin</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, hal.o(.text), UNUSED)
+<P><STRONG><a name="[14f]"></a>halIsCounterWithin</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, hal.o(.text), UNUSED)
 
-<P><STRONG><a name="[14f]"></a>halPolledDelay</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, hal.o(.text), UNUSED)
+<P><STRONG><a name="[150]"></a>halPolledDelay</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, hal.o(.text), UNUSED)
 
-<P><STRONG><a name="[c4]"></a>i2cInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text))
+<P><STRONG><a name="[c5]"></a>i2cInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = i2cInit &rArr; i2c_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_init
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[ca]"></a>i2cObjectInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, i2c.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_init
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cb]"></a>i2cStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, i2c.o(.text))
+<P><STRONG><a name="[cb]"></a>i2cObjectInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, i2c.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_init
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[cc]"></a>i2cStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = i2cStart &rArr; i2c_lld_start &rArr; dmaStreamAllocate &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[cd]"></a>i2cStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, i2c.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[150]"></a>i2cGetErrors</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text), UNUSED)
+<P><STRONG><a name="[ce]"></a>i2cStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, i2c.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
+</UL>
 
-<P><STRONG><a name="[cf]"></a>i2cMasterTransmitTimeout</STRONG> (Thumb, 60 bytes, Stack size 32 bytes, i2c.o(.text))
+<P><STRONG><a name="[151]"></a>i2cGetErrors</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text), UNUSED)
+
+<P><STRONG><a name="[d0]"></a>i2cMasterTransmitTimeout</STRONG> (Thumb, 60 bytes, Stack size 32 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = i2cMasterTransmitTimeout &rArr; i2c_lld_master_transmit_timeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_transmit_timeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
-</UL>
-
-<P><STRONG><a name="[d1]"></a>i2cMasterReceiveTimeout</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, i2c.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadAltitude
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
 </UL>
 
-<P><STRONG><a name="[d3]"></a>i2cAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, i2c.o(.text))
+<P><STRONG><a name="[d2]"></a>i2cMasterReceiveTimeout</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, i2c.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = i2cMasterReceiveTimeout &rArr; i2c_lld_master_receive_timeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_master_receive_timeout
+</UL>
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadAltitude
+</UL>
+
+<P><STRONG><a name="[d4]"></a>i2cAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = i2cAcquireBus &rArr; chMtxLock &rArr; chMtxLockS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadAltitude
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
 </UL>
 
-<P><STRONG><a name="[d4]"></a>i2cReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text))
+<P><STRONG><a name="[d5]"></a>i2cReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = i2cReleaseBus &rArr; chMtxUnlock &rArr; chSchWakeupS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
+<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadAltitude
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
 </UL>
 
-<P><STRONG><a name="[c5]"></a>pwmInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, pwm.o(.text))
+<P><STRONG><a name="[c6]"></a>pwmInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = pwmInit &rArr; pwm_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_init
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
-</UL>
-
-<P><STRONG><a name="[101]"></a>pwmObjectInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_init
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[d6]"></a>pwmStart</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_start
+<P><STRONG><a name="[102]"></a>pwmObjectInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwm.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_init
 </UL>
 
-<P><STRONG><a name="[d8]"></a>pwmStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_stop
+<P><STRONG><a name="[d7]"></a>pwmStart</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_start
 </UL>
 
-<P><STRONG><a name="[151]"></a>pwmChangePeriod</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, pwm.o(.text), UNUSED)
-
-<P><STRONG><a name="[da]"></a>pwmEnableChannel</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_enable_channel
+<P><STRONG><a name="[d9]"></a>pwmStop</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_stop
 </UL>
 
-<P><STRONG><a name="[dc]"></a>pwmDisableChannel</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_disable_channel
+<P><STRONG><a name="[152]"></a>pwmChangePeriod</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, pwm.o(.text), UNUSED)
+
+<P><STRONG><a name="[db]"></a>pwmEnableChannel</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_enable_channel
 </UL>
 
-<P><STRONG><a name="[c6]"></a>sdInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[dd]"></a>pwmDisableChannel</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, pwm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_lld_disable_channel
+</UL>
+
+<P><STRONG><a name="[c7]"></a>sdInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = sdInit &rArr; sd_lld_init &rArr; sdObjectInit &rArr; chIQInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_init
+<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[df]"></a>sdObjectInit</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, serial.o(.text))
+<P><STRONG><a name="[e0]"></a>sdObjectInit</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = sdObjectInit &rArr; chIQInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQInit
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQInit
+<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQInit
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_init
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_init
 </UL>
 
-<P><STRONG><a name="[e2]"></a>sdStart</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, serial.o(.text))
+<P><STRONG><a name="[e3]"></a>sdStart</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = sdStart &rArr; sd_lld_start &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_start
+<BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComRcv
 </UL>
 
-<P><STRONG><a name="[e4]"></a>sdStop</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, serial.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQResetI
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQResetI
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_stop
+<P><STRONG><a name="[e5]"></a>sdStop</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, serial.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQResetI
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQResetI
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchRescheduleS
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_lld_stop
 </UL>
 
-<P><STRONG><a name="[e6]"></a>sdIncomingDataI</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, serial.o(.text))
+<P><STRONG><a name="[e7]"></a>sdIncomingDataI</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = sdIncomingDataI &rArr; chEvtBroadcastFlagsI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQPutI
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQPutI
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorD8
 </UL>
 
-<P><STRONG><a name="[e7]"></a>sdRequestDataI</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, serial.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
+<P><STRONG><a name="[e8]"></a>sdRequestDataI</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, serial.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
 </UL>
 
-<P><STRONG><a name="[c7]"></a>spiInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, spi.o(.text))
+<P><STRONG><a name="[c8]"></a>spiInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, spi.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = spiInit &rArr; spi_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_init
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
-</UL>
-
-<P><STRONG><a name="[e9]"></a>spiObjectInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_init
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[ea]"></a>spiStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_start
+<P><STRONG><a name="[ea]"></a>spiObjectInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_init
 </UL>
 
-<P><STRONG><a name="[ec]"></a>spiStop</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_unselect
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_stop
+<P><STRONG><a name="[eb]"></a>spiStart</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_start
 </UL>
 
-<P><STRONG><a name="[ef]"></a>spiSelect</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_select
+<P><STRONG><a name="[ed]"></a>spiStop</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_unselect
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_stop
 </UL>
 
-<P><STRONG><a name="[f1]"></a>spiUnselect</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_unselect
+<P><STRONG><a name="[f0]"></a>spiSelect</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_select
 </UL>
 
-<P><STRONG><a name="[f2]"></a>spiStartIgnore</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_ignore
+<P><STRONG><a name="[f2]"></a>spiUnselect</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_unselect
 </UL>
 
-<P><STRONG><a name="[f4]"></a>spiStartExchange</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_exchange
+<P><STRONG><a name="[f3]"></a>spiStartIgnore</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_ignore
 </UL>
 
-<P><STRONG><a name="[f6]"></a>spiStartSend</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_send
+<P><STRONG><a name="[f5]"></a>spiStartExchange</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_exchange
 </UL>
 
-<P><STRONG><a name="[f8]"></a>spiStartReceive</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_receive
+<P><STRONG><a name="[f7]"></a>spiStartSend</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_send
 </UL>
 
-<P><STRONG><a name="[fa]"></a>spiIgnore</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_ignore
+<P><STRONG><a name="[f9]"></a>spiStartReceive</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_receive
 </UL>
 
-<P><STRONG><a name="[fb]"></a>spiExchange</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_exchange
+<P><STRONG><a name="[fb]"></a>spiIgnore</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_ignore
 </UL>
 
-<P><STRONG><a name="[fc]"></a>spiSend</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_send
+<P><STRONG><a name="[fc]"></a>spiExchange</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_exchange
 </UL>
 
-<P><STRONG><a name="[fd]"></a>spiReceive</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_receive
+<P><STRONG><a name="[fd]"></a>spiSend</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_send
 </UL>
 
-<P><STRONG><a name="[fe]"></a>spiAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
+<P><STRONG><a name="[fe]"></a>spiReceive</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_receive
 </UL>
 
-<P><STRONG><a name="[ff]"></a>spiReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, spi.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+<P><STRONG><a name="[ff]"></a>spiAcquireBus</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxLock
 </UL>
 
-<P><STRONG><a name="[152]"></a>tmObjectInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, tm.o(.text), UNUSED)
+<P><STRONG><a name="[100]"></a>spiReleaseBus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, spi.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chMtxUnlock
+</UL>
 
-<P><STRONG><a name="[c2]"></a>tmInit</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, tm.o(.text))
+<P><STRONG><a name="[153]"></a>tmObjectInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, tm.o(.text), UNUSED)
+
+<P><STRONG><a name="[c3]"></a>tmInit</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, tm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = tmInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tm_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[c3]"></a>_pal_lld_init</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, pal_lld.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<P><STRONG><a name="[c4]"></a>_pal_lld_init</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, pal_lld.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
 
-<P><STRONG><a name="[10a]"></a>_pal_lld_setgroupmode</STRONG> (Thumb, 172 bytes, Stack size 36 bytes, pal_lld.o(.text))
+<P><STRONG><a name="[10b]"></a>_pal_lld_setgroupmode</STRONG> (Thumb, 172 bytes, Stack size 36 bytes, pal_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = _pal_lld_setgroupmode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComRcv
 </UL>
 
 <P><STRONG><a name="[30]"></a>VectorB8</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, pwm_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = VectorB8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[d5]"></a>pwm_lld_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, pwm_lld.o(.text))
+<P><STRONG><a name="[d6]"></a>pwm_lld_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, pwm_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = pwm_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmObjectInit
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmObjectInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmInit
-</UL>
-
-<P><STRONG><a name="[d7]"></a>pwm_lld_start</STRONG> (Thumb, 282 bytes, Stack size 16 bytes, pwm_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmStart
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmInit
 </UL>
 
-<P><STRONG><a name="[d9]"></a>pwm_lld_stop</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, pwm_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
+<P><STRONG><a name="[d8]"></a>pwm_lld_start</STRONG> (Thumb, 282 bytes, Stack size 16 bytes, pwm_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmStop
-</UL>
-
-<P><STRONG><a name="[db]"></a>pwm_lld_enable_channel</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, pwm_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmEnableChannel
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmStart
 </UL>
 
-<P><STRONG><a name="[dd]"></a>pwm_lld_disable_channel</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, pwm_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmDisableChannel
+<P><STRONG><a name="[da]"></a>pwm_lld_stop</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, pwm_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmStop
+</UL>
+
+<P><STRONG><a name="[dc]"></a>pwm_lld_enable_channel</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, pwm_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmEnableChannel
+</UL>
+
+<P><STRONG><a name="[de]"></a>pwm_lld_disable_channel</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, pwm_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwmDisableChannel
 </UL>
 
 <P><STRONG><a name="[38]"></a>VectorD8</STRONG> (Thumb, 240 bytes, Stack size 32 bytes, serial_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = VectorD8 &rArr; sdIncomingDataI &rArr; chEvtBroadcastFlagsI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQGetI
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chEvtBroadcastFlagsI
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdIncomingDataI
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[de]"></a>sd_lld_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, serial_lld.o(.text))
+<P><STRONG><a name="[df]"></a>sd_lld_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, serial_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = sd_lld_init &rArr; sdObjectInit &rArr; chIQInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdObjectInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdInit
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdInit
 </UL>
 
-<P><STRONG><a name="[e3]"></a>sd_lld_start</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, serial_lld.o(.text))
+<P><STRONG><a name="[e4]"></a>sd_lld_start</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, serial_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = sd_lld_start &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStart
-</UL>
-
-<P><STRONG><a name="[e5]"></a>sd_lld_stop</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, serial_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStart
 </UL>
 
-<P><STRONG><a name="[e8]"></a>spi_lld_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, spi_lld.o(.text))
+<P><STRONG><a name="[e6]"></a>sd_lld_stop</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, serial_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStop
+</UL>
+
+<P><STRONG><a name="[e9]"></a>spi_lld_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, spi_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = spi_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiObjectInit
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiObjectInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiInit
-</UL>
-
-<P><STRONG><a name="[eb]"></a>spi_lld_start</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStart
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiInit
 </UL>
 
-<P><STRONG><a name="[ee]"></a>spi_lld_stop</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
+<P><STRONG><a name="[ec]"></a>spi_lld_start</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStop
-</UL>
-
-<P><STRONG><a name="[f0]"></a>spi_lld_select</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSelect
+<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStart
 </UL>
 
-<P><STRONG><a name="[ed]"></a>spi_lld_unselect</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiUnselect
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStop
+<P><STRONG><a name="[ef]"></a>spi_lld_stop</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStop
 </UL>
 
-<P><STRONG><a name="[f3]"></a>spi_lld_ignore</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiIgnore
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartIgnore
+<P><STRONG><a name="[f1]"></a>spi_lld_select</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSelect
 </UL>
 
-<P><STRONG><a name="[f5]"></a>spi_lld_exchange</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiExchange
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartExchange
+<P><STRONG><a name="[ee]"></a>spi_lld_unselect</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiUnselect
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStop
 </UL>
 
-<P><STRONG><a name="[f7]"></a>spi_lld_send</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSend
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartSend
+<P><STRONG><a name="[f4]"></a>spi_lld_ignore</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiIgnore
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartIgnore
 </UL>
 
-<P><STRONG><a name="[f9]"></a>spi_lld_receive</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReceive
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartReceive
+<P><STRONG><a name="[f6]"></a>spi_lld_exchange</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiExchange
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartExchange
 </UL>
 
-<P><STRONG><a name="[153]"></a>spi_lld_polled_exchange</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<P><STRONG><a name="[f8]"></a>spi_lld_send</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiSend
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartSend
+</UL>
+
+<P><STRONG><a name="[fa]"></a>spi_lld_receive</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiReceive
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spiStartReceive
+</UL>
+
+<P><STRONG><a name="[154]"></a>spi_lld_polled_exchange</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, spi_lld.o(.text), UNUSED)
 
 <P><STRONG><a name="[1d]"></a>Vector6C</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector6C
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[1e]"></a>Vector70</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector70
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[1f]"></a>Vector74</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector74
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[20]"></a>Vector78</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector78
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[21]"></a>Vector7C</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector7C
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[22]"></a>Vector80</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector80
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[23]"></a>Vector84</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Vector84
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[107]"></a>dmaInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32_dma.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_lld_init
+<P><STRONG><a name="[108]"></a>dmaInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32_dma.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_lld_init
 </UL>
 
-<P><STRONG><a name="[105]"></a>dmaStreamAllocate</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, stm32_dma.o(.text))
+<P><STRONG><a name="[106]"></a>dmaStreamAllocate</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, stm32_dma.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = dmaStreamAllocate &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_start
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start
-</UL>
-
-<P><STRONG><a name="[106]"></a>dmaStreamRelease</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32_dma.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_stop
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop
+<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_start
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_start
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_start
 </UL>
 
-<P><STRONG><a name="[bb]"></a>adc_lld_stop_conversion</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversionI
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversion
+<P><STRONG><a name="[107]"></a>dmaStreamRelease</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32_dma.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_lld_stop
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_stop
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_lld_stop
+</UL>
+
+<P><STRONG><a name="[bc]"></a>adc_lld_stop_conversion</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversionI
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStopConversion
 </UL>
 
 <P><STRONG><a name="[24]"></a>Vector88</STRONG> (Thumb, 134 bytes, Stack size 16 bytes, adc_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Vector88
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[b1]"></a>adc_lld_init</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, adc_lld.o(.text))
+<P><STRONG><a name="[b2]"></a>adc_lld_init</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, adc_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = adc_lld_init &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcObjectInit
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcObjectInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInit
-</UL>
-
-<P><STRONG><a name="[b4]"></a>adc_lld_start</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, adc_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStart
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcInit
 </UL>
 
-<P><STRONG><a name="[b6]"></a>adc_lld_stop</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, adc_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
+<P><STRONG><a name="[b5]"></a>adc_lld_start</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, adc_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStop
-</UL>
-
-<P><STRONG><a name="[b8]"></a>adc_lld_start_conversion</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcConvert
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStartConversion
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStartConversionI
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStart
 </UL>
 
-<P><STRONG><a name="[154]"></a>adcSTM32EnableTSVREFE</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
-
-<P><STRONG><a name="[155]"></a>adcSTM32DisableTSVREFE</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
-
-<P><STRONG><a name="[c1]"></a>hal_lld_init</STRONG> (Thumb, 166 bytes, Stack size 0 bytes, hal_lld.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaInit
+<P><STRONG><a name="[b7]"></a>adc_lld_stop</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, adc_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStop
 </UL>
 
-<P><STRONG><a name="[6e]"></a>stm32_clock_init</STRONG> (Thumb, 272 bytes, Stack size 0 bytes, hal_lld.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__early_init
+<P><STRONG><a name="[b9]"></a>adc_lld_start_conversion</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcConvert
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStartConversion
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adcStartConversionI
+</UL>
+
+<P><STRONG><a name="[155]"></a>adcSTM32EnableTSVREFE</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
+
+<P><STRONG><a name="[156]"></a>adcSTM32DisableTSVREFE</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc_lld.o(.text), UNUSED)
+
+<P><STRONG><a name="[c2]"></a>hal_lld_init</STRONG> (Thumb, 166 bytes, Stack size 0 bytes, hal_lld.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+</UL>
+
+<P><STRONG><a name="[6f]"></a>stm32_clock_init</STRONG> (Thumb, 272 bytes, Stack size 0 bytes, hal_lld.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__early_init
 </UL>
 
 <P><STRONG><a name="[31]"></a>VectorBC</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = VectorBC &rArr; i2c_lld_serve_event_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[32]"></a>VectorC0</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = VectorC0 &rArr; i2c_lld_serve_error_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[33]"></a>VectorC4</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = VectorC4 &rArr; i2c_lld_serve_event_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_event_interrupt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
 <P><STRONG><a name="[34]"></a>VectorC8</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = VectorC8 &rArr; i2c_lld_serve_error_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_port_irq_epilogue
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_lld_serve_error_interrupt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> vectors.o(RESET)
 </UL>
-<P><STRONG><a name="[c9]"></a>i2c_lld_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, i2c_lld.o(.text))
+<P><STRONG><a name="[ca]"></a>i2c_lld_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = i2c_lld_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
 </UL>
 
-<P><STRONG><a name="[cc]"></a>i2c_lld_start</STRONG> (Thumb, 400 bytes, Stack size 24 bytes, i2c_lld.o(.text))
+<P><STRONG><a name="[cd]"></a>i2c_lld_start</STRONG> (Thumb, 400 bytes, Stack size 24 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = i2c_lld_start &rArr; dmaStreamAllocate &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicEnableVector
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamAllocate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStart
-</UL>
-
-<P><STRONG><a name="[ce]"></a>i2c_lld_stop</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, i2c_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
-</UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStop
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStart
 </UL>
 
-<P><STRONG><a name="[d2]"></a>i2c_lld_master_receive_timeout</STRONG> (Thumb, 184 bytes, Stack size 48 bytes, i2c_lld.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<P><STRONG><a name="[cf]"></a>i2c_lld_stop</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, i2c_lld.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvicDisableVector
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmaStreamRelease
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterReceiveTimeout
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStop
 </UL>
 
-<P><STRONG><a name="[d0]"></a>i2c_lld_master_transmit_timeout</STRONG> (Thumb, 280 bytes, Stack size 56 bytes, i2c_lld.o(.text))
+<P><STRONG><a name="[d3]"></a>i2c_lld_master_receive_timeout</STRONG> (Thumb, 184 bytes, Stack size 48 bytes, i2c_lld.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = i2c_lld_master_receive_timeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterReceiveTimeout
+</UL>
+
+<P><STRONG><a name="[d1]"></a>i2c_lld_master_transmit_timeout</STRONG> (Thumb, 280 bytes, Stack size 56 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = i2c_lld_master_transmit_timeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTSetI
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chVTResetI
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchGoSleepS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterTransmitTimeout
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterTransmitTimeout
 </UL>
 
-<P><STRONG><a name="[67]"></a>main</STRONG> (Thumb, 154 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[68]"></a>main</STRONG> (Thumb, 168 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = main &rArr; i2cStart &rArr; i2c_lld_start &rArr; dmaStreamAllocate &rArr; nvicEnableVector
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleep
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_setgroupmode
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStart
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdSleep
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chThdCreateStatic
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSysInit
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_setgroupmode
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cStart
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cObjectInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cInit
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;halInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[10b]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, noretval__2sprintf.o(.text))
+<P><STRONG><a name="[10c]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, noretval__2sprintf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadRoulisTangage
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComRcv
 </UL>
 
-<P><STRONG><a name="[10f]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, _printf_pad.o(.text))
+<P><STRONG><a name="[110]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, _printf_pad.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
 </UL>
 
-<P><STRONG><a name="[110]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, _printf_pad.o(.text))
+<P><STRONG><a name="[111]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, _printf_pad.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _printf_post_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
 </UL>
 
-<P><STRONG><a name="[10e]"></a>_printf_str</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, _printf_str.o(.text))
+<P><STRONG><a name="[10f]"></a>_printf_str</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, _printf_str.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _printf_str &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
 </UL>
 
-<P><STRONG><a name="[61]"></a>_printf_int_dec</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, _printf_dec.o(.text))
+<P><STRONG><a name="[62]"></a>_printf_int_dec</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, _printf_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = _printf_int_dec &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
+<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d
 </UL>
 
-<P><STRONG><a name="[112]"></a>__printf</STRONG> (Thumb, 310 bytes, Stack size 40 bytes, __printf_flags_wp.o(.text))
+<P><STRONG><a name="[113]"></a>__printf</STRONG> (Thumb, 310 bytes, Stack size 40 bytes, __printf_flags_wp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_percent
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_percent
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
+<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 
-<P><STRONG><a name="[10c]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
+<P><STRONG><a name="[10d]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreadComRcv
 </UL>
 
-<P><STRONG><a name="[156]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[157]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[157]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[158]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[158]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[159]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[111]"></a>_printf_int_common</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, _printf_intcommon.o(.text))
+<P><STRONG><a name="[112]"></a>_printf_int_common</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, _printf_intcommon.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
 </UL>
 
-<P><STRONG><a name="[10d]"></a>_printf_char_common</STRONG> (Thumb, 32 bytes, Stack size 64 bytes, _printf_char_common.o(.text))
+<P><STRONG><a name="[10e]"></a>_printf_char_common</STRONG> (Thumb, 32 bytes, Stack size 64 bytes, _printf_char_common.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
 <LI>Call Chain = _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 
-<P><STRONG><a name="[51]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<P><STRONG><a name="[52]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> noretval__2sprintf.o(.text)
 </UL>
-<P><STRONG><a name="[115]"></a>_printf_cs_common</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, _printf_char.o(.text))
+<P><STRONG><a name="[116]"></a>_printf_cs_common</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, _printf_char.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _printf_cs_common &rArr; _printf_str &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
 </UL>
-<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_string
-<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char
-</UL>
-
-<P><STRONG><a name="[116]"></a>_printf_char</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, _printf_char.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_string
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char
 </UL>
 
-<P><STRONG><a name="[63]"></a>_printf_string</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, _printf_char.o(.text))
+<P><STRONG><a name="[117]"></a>_printf_char</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, _printf_char.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
+</UL>
+
+<P><STRONG><a name="[64]"></a>_printf_string</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, _printf_char.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _printf_string &rArr; _printf_cs_common &rArr; _printf_str &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_cs_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_s
-</UL>
-
-<P><STRONG><a name="[68]"></a>exit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, exit.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_s
 </UL>
 
-<P><STRONG><a name="[6c]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
+<P><STRONG><a name="[69]"></a>exit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, exit.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[159]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[6d]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
+</UL>
 
-<P><STRONG><a name="[15a]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[15a]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[15b]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[15b]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[113]"></a>_is_digit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, __printf_wp.o(i._is_digit))
-<BR><BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+<P><STRONG><a name="[15c]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[114]"></a>_is_digit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, __printf_wp.o(i._is_digit))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 <P>
 <H3>
@@ -1751,64 +1761,64 @@ Local Symbols
 <P><STRONG><a name="[43]"></a>wakeup</STRONG> (Thumb, 96 bytes, Stack size 0 bytes, chschd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> chschd.o(.text)
 </UL>
-<P><STRONG><a name="[53]"></a>write</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[54]"></a>write</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = write &rArr; chOQWriteTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[54]"></a>read</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[55]"></a>read</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = read &rArr; chIQReadTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[55]"></a>put</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[56]"></a>put</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = put &rArr; chOQPutTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[56]"></a>get</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[57]"></a>get</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = get &rArr; chIQGetTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[57]"></a>putt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[58]"></a>putt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = putt &rArr; chOQPutTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQPutTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[58]"></a>gett</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[59]"></a>gett</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = gett &rArr; chIQGetTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQGetTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[59]"></a>writet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[5a]"></a>writet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = writet &rArr; chOQWriteTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
-<P><STRONG><a name="[5a]"></a>readt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
+<P><STRONG><a name="[5b]"></a>readt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = readt &rArr; chIQReadTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> serial.o(.constdata)
 </UL>
 <P><STRONG><a name="[45]"></a>tm_start</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmInit
+<BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmInit
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> tm.o(.text)
 </UL>
@@ -1821,58 +1831,58 @@ Local Symbols
 <P><STRONG><a name="[48]"></a>spi_lld_serve_rx_interrupt</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, spi_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = spi_lld_serve_rx_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> spi_lld.o(.text)
 </UL>
 <P><STRONG><a name="[49]"></a>spi_lld_serve_tx_interrupt</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, spi_lld.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
+<BR><BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> spi_lld.o(.text)
 </UL>
 <P><STRONG><a name="[4a]"></a>adc_lld_serve_rx_interrupt</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, adc_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = adc_lld_serve_rx_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> adc_lld.o(.text)
 </UL>
 <P><STRONG><a name="[4d]"></a>i2c_lld_safety_timeout</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = i2c_lld_safety_timeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_lld.o(.text)
 </UL>
 <P><STRONG><a name="[4b]"></a>i2c_lld_serve_rx_end_irq</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = i2c_lld_serve_rx_end_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_lld.o(.text)
 </UL>
 <P><STRONG><a name="[4c]"></a>i2c_lld_serve_tx_end_irq</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = i2c_lld_serve_tx_end_irq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
+<BR>[Calls]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_halt
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_lld.o(.text)
 </UL>
-<P><STRONG><a name="[108]"></a>i2c_lld_serve_event_interrupt</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, i2c_lld.o(.text))
+<P><STRONG><a name="[109]"></a>i2c_lld_serve_event_interrupt</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = i2c_lld_serve_event_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC4
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorBC
 </UL>
 
-<P><STRONG><a name="[109]"></a>i2c_lld_serve_error_interrupt</STRONG> (Thumb, 216 bytes, Stack size 8 bytes, i2c_lld.o(.text))
+<P><STRONG><a name="[10a]"></a>i2c_lld_serve_error_interrupt</STRONG> (Thumb, 216 bytes, Stack size 8 bytes, i2c_lld.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = i2c_lld_serve_error_interrupt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chSchReadyI
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC8
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VectorC0
@@ -1881,7 +1891,7 @@ Local Symbols
 <P><STRONG><a name="[4f]"></a>ThreadComSnd</STRONG> (Thumb, 50 bytes, Stack size 56 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = ThreadComSnd &rArr; chIQReadTimeout &rArr; chSchGoSleepTimeoutS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chIQReadTimeout
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL>
@@ -1889,11 +1899,11 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = ThreadComRcv &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStart
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_setgroupmode
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chOQWriteTimeout
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sdStart
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_pal_lld_setgroupmode
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL>
@@ -1901,14 +1911,24 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = ThreadRoulisTangage &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cReleaseBus
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cAcquireBus
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterTransmitTimeout
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cReleaseBus
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cAcquireBus
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterTransmitTimeout
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL>
-<P><STRONG><a name="[52]"></a>_printf_input_char</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _printf_char_common.o(.text))
+<P><STRONG><a name="[51]"></a>ThreadAltitude</STRONG> (Thumb, 662 bytes, Stack size 72 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = ThreadAltitude &rArr; i2cMasterTransmitTimeout &rArr; i2c_lld_master_transmit_timeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cReleaseBus
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cAcquireBus
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterReceiveTimeout
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2cMasterTransmitTimeout
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[53]"></a>_printf_input_char</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _printf_char_common.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> _printf_char_common.o(.text)
 </UL><P>
 <H3>

@@ -1,0 +1,543 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <Windows.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include "rotozoom/SDL_rotozoom.h"
+#include <time.h>
+#include <SDL/SDL_ttf.h>
+#include <pthread.h>
+
+
+#define HAUTEURFENETRE 600
+#define LARGEURFENETRE 800
+
+#define SENSITIVITY 1 //Facteur multiplicateur
+#define BAUDRATE 115200 //Surement à revoir pour l'adapter à la liaison
+
+
+//prototypes
+int initialization();
+void dataReceiving(void *data);
+void dataSending(void *data);
+void displaying(void *data);
+
+//Globales:
+//variables pour la com
+int g_comport;
+HANDLE g_hComm;
+//Format de la trame (peut être à revoir):
+/*
+╔═══════╦══════╦══════╦════════╦════╗
+║ Txxx  ║ Rxxx ║ Lxxx ║ Axxxxx ║ S  ║
+╠═══════╬══════╬══════╬════════╬════╣
+║tangage║Roulis║Lacet ║Altitude║Stop║
+╚═══════╩══════╩══════╩════════╩════╝
+
+Tangage, Roulis, Lacet: angle compris entre 0 et 360
+Altitude: Donnée en Cm
+Stop; permet de savoir que toute la chaine à été reçue.
+*/
+char g_bufComRcv[20]= {0};
+char g_bufComSnd[20]= {0};
+
+//Variables pour l'affichage
+int g_angleAvLacet = 0;
+int g_angleAvRoulis = 0;
+int g_angleAvTangage = 0;
+
+//variables pour l'envoi (prévoir une initialisation avec des valeurs reçues).
+int g_angleTangageDesire;
+int g_angleTangageReel;
+
+int g_angleRoulisDesire;
+int g_angleRoulisReel;
+
+int g_angleLacetDesire;
+int g_angleLacetReel;
+
+int g_altitudeDesire = 0;
+int g_altitudeReel = 0;
+
+SDL_Event g_event;
+int g_run = 1;
+
+enum //Step init
+{
+    ComPort_Open,
+    ComPort_Config,
+    ComPort_Poll,
+    ComPort_Send,
+    ComPort_End
+};
+
+int main ( int argc, char** argv )
+{
+    //activation de la console avec la SDL
+    freopen("CON","w", stderr);
+    freopen("CON","w", stdout);
+
+    pthread_t receivData;
+    pthread_t sendData;
+    pthread_t display;
+
+    int ret = 0;
+
+    ret = initialization();
+
+    if(ret == 0)
+    {
+        //Création de 3 threads qui vont gérer l'envois, la réception et l'affichage:
+        ret = pthread_create(&receivData, NULL, (void*)dataReceiving, NULL);
+        if(ret)
+        {
+            printf("Erreur lors de la creation du thread de réception: %d\n", ret);
+        }
+
+        ret = pthread_create(&sendData, NULL, (void*)dataSending, NULL);
+        if(ret)
+        {
+            printf("Erreur lors de la creation du thread d'envois: %d\n", ret);
+        }
+
+        ret = pthread_create(&display, NULL, (void*)displaying, NULL);
+        if(ret)
+        {
+            printf("Erreur lors de la creation du thread d'affichage: %d\n", ret);
+        }
+
+        pthread_join(receivData, NULL);
+        pthread_join(sendData, NULL);
+        pthread_join(display, NULL);
+
+    }
+    return EXIT_SUCCESS;
+}
+
+int initialization()
+{
+    int retour = 0;
+    int State = ComPort_Open;
+    char receptNOk = 1;
+    LPCWSTR port[20];
+    unsigned char read[50] = {0};
+    DWORD dwCommEvent;
+    char chRead;
+    DCB config;
+    int i = 0;
+
+    printf("Comport: ");
+    scanf("%d", &g_comport);
+    sprintf((char*)port, "\\\\.\\COM%d", g_comport);
+    unsigned char frame_ack[] = {'T', 0,0,0, 'R', 0,0,0, 'L', 0,0,0, 'A', 0,0,0,0,0, 'S'};
+
+
+
+    while(State != ComPort_End)
+    {
+        switch(State)
+        {
+        case ComPort_Open:
+
+            g_hComm = CreateFile((LPCSTR)port, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+
+            if(g_hComm == INVALID_HANDLE_VALUE)
+            {
+                printf("impossible de se co...%d\n", (int)GetLastError());
+                CloseHandle(g_hComm);
+                return -1;
+            }
+            else
+            {
+                printf("great! :)");
+                State = ComPort_Config;
+            }
+            break;
+
+        case ComPort_Config:
+            config.DCBlength = sizeof(DCB);
+            if(GetCommState(g_hComm, &config) == 0)
+            {
+                printf("Erreur lors de la config!");
+                return -1;
+            }
+            else
+            {
+                config.BaudRate = 57600;             // Current baud
+                config.fBinary = TRUE;               // Binary mode; no EOF check
+                config.fParity = TRUE;               // Enable parity checking
+                config.fOutxCtsFlow = FALSE;         // No CTS output flow control
+                config.fOutxDsrFlow = FALSE;         // No DSR output flow control
+                config.fDtrControl = DTR_CONTROL_ENABLE;
+                                                      // DTR flow control type
+                config.fDsrSensitivity = FALSE;      // DSR sensitivity
+                config.fTXContinueOnXoff = TRUE;     // XOFF continues Tx
+                config.fOutX = FALSE;                // No XON/XOFF out flow control
+                config.fInX = FALSE;                 // No XON/XOFF in flow control
+                config.fErrorChar = FALSE;           // Disable error replacement
+                config.fNull = FALSE;                // Disable null stripping
+                config.fRtsControl = RTS_CONTROL_ENABLE;
+                                                      // RTS flow control
+                config.fAbortOnError = FALSE;        // Do not abort reads/writes on
+                                                      // error
+                config.ByteSize = 8;                 // Number of bits/byte, 4-8
+                config.Parity = NOPARITY;            // 0-4=no,odd,even,mark,space
+                config.StopBits = ONESTOPBIT;        // 0,1,2 = 1, 1.5, 2
+
+                if(!SetCommState(g_hComm, &config))
+                {
+                    printf("erreur de config 2\n");
+                    return -1;
+                }
+                printf("Config Ok!\n");
+                State = ComPort_Poll;
+            }
+            break;
+
+        case ComPort_Poll:
+            //On attend d'avoir des informations de quadri...
+
+            if(!SetCommMask(g_hComm, EV_RXCHAR))
+            {
+                printf("F**k!");
+            }
+            while(receptNOk && g_run)
+            {
+//                printf("receiving real values...\n");
+                if(WaitCommEvent(g_hComm, &dwCommEvent, NULL))
+                {
+                    if(ReadFile(g_hComm, &chRead, 50, read, NULL))
+                    {
+                        for (i = 0; i<50; i++)
+                        {
+                            if(read[i] == 'T')
+                            {
+                                
+                            }
+                            if(read[i] == 'R')
+                            {
+                                
+                            }
+                            if(read[i] == 'L')
+                            {
+                                
+                            }
+                            if(read[i] == 'A')
+                            {
+                                
+                            }
+                        }
+                        printf("\n");
+                    }
+                    else
+                    {
+                        printf("echec!");
+                    }
+                }
+                else
+                {
+                    printf("Gros echec!");
+                }
+
+//                RS232_PollComport(g_comport, g_bufComRcv, 20);
+                //prise des valeurs reçues comme valeurs de base...
+//#warning verifier les calculs
+//                ret = sscanf((char*)g_bufComRcv, "T%3dR%3dL%3dA%5dS", (&g_angleTangageReel)-180, (&g_angleRoulisReel)-180, (&g_angleLacetReel)-180, &g_altitudeReel);
+//                g_angleTangageDesire = g_angleTangageReel;
+//                g_angleRoulisDesire = g_angleRoulisReel;
+//                g_angleLacetDesire = g_angleLacetReel;
+//                g_altitudeDesire = g_altitudeReel;
+//
+//#warning a verifier, faut-il prendre le nombre de caracteres luent(14) ou la chaine complete(20)
+//#warning penser a renvoyer regulierement du cote du quadri
+//                if(ret == 14)
+//                {
+//                    receptNOk = 0;
+//                }
+            }
+            State = ComPort_Send;
+            break;
+
+        case ComPort_Send:
+            //On lui confirme qu'on a bien reçu les données.
+//            while(sendNOK && g_run)
+//            {
+//                printf("sending ACK...\n");
+//                ret = RS232_SendBuf(g_comport, frame_ack, 20);
+//                if(ret == 20)
+//                {
+//                    sendNOK = 0;
+//                }
+//#warning penser a clearer du cote du quadri...
+//            }
+            State = ComPort_End;
+            break;
+        }
+    }
+    return retour;
+}
+
+void dataReceiving(void *data)
+{
+    int ret = 0;
+    while(g_run)
+    {
+        printf("receiving real values...\n");
+//        RS232_PollComport(g_comport, g_bufComRcv, 20);
+        //prise des valeurs reçues comme valeurs de base...
+#warning verifier les calculs
+        sscanf((char*)g_bufComRcv, "T%3dR%3dL%3dA%5dS", (&g_angleTangageReel)-180, (&g_angleRoulisReel)-180, (&g_angleLacetReel)-180, &g_altitudeReel);
+#warning a verifier, faut-il prendre le nombre de caracteres luent(14) ou la chaine complete(20)
+#warning penser a renvoyer regulierement du cote du quadri
+    }
+}
+
+void dataSending(void *data)
+{
+    int sendNOK = 1;
+    int ret = 0;
+
+    //Gros while avec scrutation des touches/souris qui envois
+    while(g_run)
+    {
+        SDL_WaitEvent(&g_event);
+        switch(g_event.type)
+        {
+        case SDL_MOUSEMOTION:
+            g_angleTangageDesire+=g_event.motion.xrel*SENSITIVITY;
+            g_angleRoulisDesire+=g_event.motion.yrel*SENSITIVITY;
+            break;
+        case SDL_KEYDOWN:
+            switch(g_event.key.keysym.sym)
+            {
+            case SDLK_z:
+                g_altitudeDesire+=SENSITIVITY;
+                break;
+            case SDLK_s:
+                g_altitudeDesire-=SENSITIVITY;
+                break;
+            case SDLK_q:
+                g_angleLacetDesire-=SENSITIVITY;
+                break;
+            case SDLK_d:
+                g_angleLacetDesire+=SENSITIVITY;
+                break;
+            default:
+                break;
+            }
+            break;
+        }
+        //envoi des valeurs
+        char bufLettre = 0;
+        char bufVal[3] = {0};
+        char bufAltitude[5] = {0};
+
+        sprintf(&bufLettre, "%c", 'T');
+        strcat(g_bufComSnd, &bufLettre);
+
+        sprintf(bufVal, "%d", g_angleTangageDesire);
+        strcat(g_bufComSnd, bufVal);
+
+        sprintf(&bufLettre, "%c", 'R');
+        strcat(g_bufComSnd, &bufLettre);
+
+        sprintf(bufVal, "%d", g_angleRoulisDesire);
+        strcat(g_bufComSnd, bufVal);
+
+        sprintf(&bufLettre, "%c", 'L');
+        strcat(g_bufComSnd, &bufLettre);
+
+        sprintf(bufVal, "%d", g_angleLacetDesire);
+        strcat(g_bufComSnd, bufVal);
+
+        sprintf(&bufLettre, "%c", 'A');
+        strcat(g_bufComSnd, &bufLettre);
+
+        sprintf(bufAltitude, "%d", g_altitudeDesire);
+        strcat(g_bufComSnd, bufAltitude);
+
+        sprintf(&bufLettre, "%c", 'S');
+        strcat(g_bufComSnd, &bufLettre);
+
+        while(sendNOK && g_run)
+        {
+            printf("sending desired values...\n");
+//            ret = RS232_SendBuf(g_comport, g_bufComSnd, 20);
+            if(ret == 20)
+            {
+                sendNOK = 0;
+            }
+#warning penser a clearer du cote du quadri...
+        }
+    }
+}
+
+void displaying(void *data)
+{
+    SDL_Surface *ecran = NULL;
+    Uint32 debutBoucle = 0, finBoucle = 0, tempsEcoule = 0;
+    Uint16 frameRate = 1000/50;
+
+
+    SDL_Surface *surfaceBGTangage = IMG_Load("res/TangageBG.png");
+    SDL_Surface *surfaceAvTangage = IMG_Load("res/AvTangage.png");
+    SDL_Surface *surfaceBGLacet = IMG_Load("res/BoussoleBG.png");
+    SDL_Surface *surfaceAvLacet = IMG_Load("res/AvBoussole.png");
+    SDL_Surface *surfaceBGRoulis = IMG_Load("res/RouliBG.png");
+    SDL_Surface *surfaceAvRoulis = IMG_Load("res/AvRoulis.png");
+
+    SDL_Rect positionBGTangage;
+    SDL_Rect positionAvTangage;
+    SDL_Rect positionBGRoulis;
+    SDL_Rect positionAvRoulis;
+    SDL_Rect positionBGLacet;
+    SDL_Rect positionAvLacet;
+    SDL_Rect positionAltitude;
+    SDL_Rect positionSignal;
+    SDL_Rect positionBatterie;
+
+    positionBGTangage.x = 20;
+    positionBGTangage.y = 20;
+
+    positionAvTangage.x = 30;
+    positionAvTangage.y = 30;
+
+    positionBGRoulis.x = 200;
+    positionBGRoulis.y = 20;
+
+    positionAvRoulis.x = 210;
+    positionAvRoulis.y = 30;
+
+    positionBGLacet.x = 360;
+    positionBGLacet.y = 20;
+
+    positionAvLacet.x = 370;
+    positionAvLacet.y = 30;
+
+    positionAltitude.x = 550;
+    positionAltitude.y = 70;
+
+    positionBatterie.x = 30;
+    positionBatterie.y = 90;
+
+    positionSignal.x = 130;
+    positionSignal.y = 90;
+
+    // Initialisation de la SDL
+    if(SDL_Init(SDL_INIT_VIDEO) < 0)
+    {
+        printf("Erreur lors de l'initialisation de la SDL : %s", SDL_GetError());
+        SDL_Quit();
+        g_run = 0;
+    }
+
+    //Initialisation de SDL_ttf
+    if(TTF_Init() == -1)
+    {
+        printf("Erreur lors de l'initialisation de SDL_ttf: %s\n", TTF_GetError());
+        exit(EXIT_FAILURE);
+        g_run = 0;
+    }
+    // Création de la fenêtre
+    ecran = SDL_SetVideoMode(LARGEURFENETRE, HAUTEURFENETRE, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
+
+    TTF_Font *Font_g_altitude = NULL;
+    Font_g_altitude = TTF_OpenFont("res/DS-DIGI.ttf", 40);
+    SDL_Color couleurNoire = {0,0,0};
+    SDL_Surface *surfaceAltitude;
+
+    while (g_run)
+    {
+        debutBoucle = SDL_GetTicks();
+        SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 116, 124, 121));
+
+        SDL_BlitSurface(surfaceBGTangage, NULL, ecran, &positionBGTangage);
+        SDL_BlitSurface(surfaceBGRoulis, NULL, ecran, &positionBGRoulis);
+        SDL_BlitSurface(surfaceBGLacet, NULL, ecran, &positionBGLacet);
+
+        //--- AvLacet -------------------------------------------------------------------
+//        g_angleAvLacet++;
+//        if(g_angleAvLacet>=360)
+//        {
+//            g_angleAvLacet-=360;
+//        }
+        SDL_Surface* rotatedAvLacet = rotozoomSurface(surfaceAvLacet, g_angleAvLacet, 1.0, 0);
+        positionAvLacet.x = 440-(rotatedAvLacet->w)/2;
+        positionAvLacet.y = 100-(rotatedAvLacet->w)/2;
+        SDL_BlitSurface(rotatedAvLacet, NULL, ecran, &positionAvLacet);
+        SDL_FreeSurface(rotatedAvLacet);
+        //----- AvRoulis -----------------------------------------------------------------
+//        g_angleAvRoulis++;
+//        if(g_angleAvRoulis>=360)
+//        {
+//            g_angleAvRoulis-=360;
+//        }
+        SDL_Surface* rotatedAvRoulis = rotozoomSurface(surfaceAvRoulis, g_angleAvRoulis, 1.0, 0);
+        positionAvRoulis.x = 280-(rotatedAvRoulis->w)/2;
+        positionAvRoulis.y = 100-(rotatedAvRoulis->w)/2;
+
+        SDL_BlitSurface(rotatedAvRoulis, NULL, ecran, &positionAvRoulis);
+        SDL_FreeSurface(rotatedAvRoulis);
+        //----- AvTangage -----------------------------------------------------------------
+//        g_angleAvTangage++;
+//        if(g_angleAvTangage>=360)
+//        {
+//            g_angleAvTangage-=360;
+//        }
+
+        SDL_Surface *rotatedAvTangage = rotozoomSurface(surfaceAvTangage, g_angleAvTangage, 1.0, 0);
+        positionAvTangage.x = 100-(rotatedAvTangage->w)/2;
+        positionAvTangage.y = 100-(rotatedAvTangage->w)/2;
+
+        SDL_BlitSurface(rotatedAvTangage, NULL, ecran, &positionAvTangage);
+        SDL_FreeSurface(rotatedAvTangage);
+        //----- Altitude -------------------------------------------------------------------
+        char chaineAltitude[14] = {0};
+        char StringAltitude[11] = {'A', 'l', 't', 'i', 't', 'u', 'd', 'e', ':', ' '};
+//        g_altitudeReel++;
+        char bufAltitude[4];
+
+        strcat(chaineAltitude, StringAltitude);
+        sprintf(bufAltitude, "%d", g_altitudeReel);
+        strcat(chaineAltitude, bufAltitude);
+        surfaceAltitude = TTF_RenderText_Blended(Font_g_altitude, chaineAltitude, couleurNoire);
+        SDL_BlitSurface(surfaceAltitude, NULL, ecran, &positionAltitude);
+
+        //----- Charge batterie ------------------------------------------------------------
+
+        //----- Qualité signal -------------------------------------------------------------
+
+        //----------------------------------------------------------------------------------
+
+        SDL_Flip(ecran);
+        finBoucle = SDL_GetTicks();
+        tempsEcoule = finBoucle - debutBoucle;
+        SDL_PollEvent(&g_event);
+
+        switch(g_event.type)
+        {
+        case SDL_QUIT:
+            g_run = 0;
+            break;
+        case SDL_KEYDOWN:
+            switch(g_event.key.keysym.sym)
+            {
+            case SDLK_ESCAPE:
+                g_run = 0;
+                break;
+            default:
+                break;
+            }
+            break;
+        }
+
+        if(tempsEcoule<frameRate)
+        {
+            SDL_Delay(frameRate-tempsEcoule);
+        }
+    }
+
+    TTF_CloseFont(Font_g_altitude);
+    TTF_Quit();
+    SDL_Quit();
+}

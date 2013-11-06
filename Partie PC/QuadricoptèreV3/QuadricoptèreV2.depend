@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1379259278 source:d:\bibliothèques\documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"SDL_rotozoom.h"
+
+1379266608 d:\bibliothèques\documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.h
+	<math.h>
+	"SDL/SDL.h"
+
+1379589269 source:d:\bibliothèques\documents\programmation\quadricoptère\partie pc\quadricoptèrev3\main.c
+	<stdlib.h>
+	<stdio.h>
+	<Windows.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	"rotozoom/SDL_rotozoom.h"
+	<time.h>
+	<SDL/SDL_ttf.h>
+	<pthread.h>
+
+1379259278 source:d:\bibliothèque\documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"SDL_rotozoom.h"
+
+1379266608 d:\bibliothèque\documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.h
+	<math.h>
+	"SDL/SDL.h"
+
+1381065868 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"SDL_rotozoom.h"
+
+1381065868 d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.h
+	<math.h>
+	"SDL/SDL.h"
+
+1382623413 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\main.c
+	<stdlib.h>
+	<stdio.h>
+	<Windows.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	"rotozoom/SDL_rotozoom.h"
+	<time.h>
+	<SDL/SDL_ttf.h>
+	<pthread.h>
+	<string.h>
+

@@ -23,15 +23,6 @@
 
 #define OSS 2 //Oversampling settings (taux d'échantillonage du BMP085 compris entre 0 (faible taux mais peu énergivore) et 3 (8 échantillons avant envois mais très énergivore))
 
-//static void pwmpcb(PWMDriver *pwmp);
-//static void adccb(ADCDriver *adcp, adcsample_t *buffer, size_t n);
-//static void spicb(SPIDriver *spip);
-
-///* Total number of channels to be sampled by a single ADC operation.*/
-//#define ADC_GRP1_NUM_CHANNELS   2
-
-///* Depth of the conversion buffer, channels are sampled four times each.*/
-//#define ADC_GRP1_BUF_DEPTH      4
 
 /* Max number of mail in the box. */
 #define MAILBOX_SIZE						1
@@ -41,6 +32,21 @@ const I2CConfig *i2cConfig1;
 
 //Globale contenant les caractères à envoyer par la liaison sans fil. (peut être remplacer par des mailbox)
 char stringTangageRoulis[8] = {0};
+char stringAltitude[6] = {0};
+
+typedef struct PressureVar PressureVar;
+struct PressureVar
+{
+	long X1;
+	long X2;
+	long X3;
+	
+	long B3;
+	unsigned long B4;
+	long B5;
+	long B6;
+	unsigned long B7;
+};
 
 typedef struct BMP085_reg BMP085_reg;
 struct BMP085_reg
@@ -64,85 +70,22 @@ struct BMP085_reg
 typedef struct long_BMP085_reg long_BMP085_reg;
 struct long_BMP085_reg
 {
-	long ac1; //Registre 0xAA
-	long ac2; //Registre 0xAC
-	long ac3; //Registre 0xAE
-	long ac4; //Registre 0xB0
-	long ac5; //Registre 0xB2
-	long ac6; //Registre 0xB4
+	int ac1; 					//Registre 0xAA
+	int ac2; 					//Registre 0xAC
+	int ac3; 					//Registre 0xAE
+	unsigned int ac4; //Registre 0xB0
+	unsigned int ac5; //Registre 0xB2
+	unsigned int ac6; //Registre 0xB4
 
-	long b1; //Registre 0xB6
-	long b2; //Registre 0xB8
+	int b1; 					//Registre 0xB6
+	int b2; 					//Registre 0xB8
 
-	long mb; //Registre 0xBA
-	long mc; //Registre 0xBC
-	long md; //Registre 0xBE
+	int mb; 					//Registre 0xBA
+	int mc; 					//Registre 0xBC
+	int md; 					//Registre 0xBE
 };
 
 
-//I2CConfig configI2C_1;
-//I2CDriver driverI2C_1;
-/*
- * ADC samples buffer.
- */
-//static adcsample_t samples[ADC_GRP1_NUM_CHANNELS * ADC_GRP1_BUF_DEPTH];
-
-/*
- * ADC conversion group.
- * Mode:        Linear buffer, 4 samples of 2 channels, SW triggered.
- * Channels:    IN10   (48 cycles sample time)
- *              Sensor (192 cycles sample time)
- */
-//static const ADCConversionGroup adcgrpcfg = {
-//  FALSE,
-//  ADC_GRP1_NUM_CHANNELS,
-//  adccb,
-//  NULL,
-//  /* HW dependent part.*/
-//  0,                        /* CR1 */
-//  ADC_CR2_SWSTART,          /* CR2 */
-//  0,
-//  ADC_SMPR2_SMP_AN10(ADC_SAMPLE_48) | ADC_SMPR2_SMP_SENSOR(ADC_SAMPLE_192),
-//  0,
-//  ADC_SQR1_NUM_CH(ADC_GRP1_NUM_CHANNELS),
-//  0,
-//  0,
-//  0,
-//  ADC_SQR5_SQ2_N(ADC_CHANNEL_IN10) | ADC_SQR5_SQ1_N(ADC_CHANNEL_SENSOR)
-//};
-
-/*
- * PWM configuration structure.
- * Cyclic callback enabled, channels 1 and 2 enabled without callbacks,
- * the active state is a logic one.
- */
-//static PWMConfig pwmcfg = {
-//  10000,                                    /* 10kHz PWM clock frequency.   */
-//  10000,                                    /* PWM period 1S (in ticks).    */
-//  pwmpcb,
-//  {
-//    {PWM_OUTPUT_ACTIVE_HIGH, NULL},
-//    {PWM_OUTPUT_ACTIVE_HIGH, NULL},
-//    {PWM_OUTPUT_DISABLED, NULL},
-//    {PWM_OUTPUT_DISABLED, NULL}
-//  },
-//  /* HW dependent part.*/
-//  0,
-//  0
-//};
-
-/*
- * SPI configuration structure.
- * Maximum speed (12MHz), CPHA=0, CPOL=0, 16bits frames, MSb transmitted first.
- * The slave select line is the pin GPIOA_SPI1NSS on the port GPIOA.
- */
-//static const SPIConfig spicfg = {
-//  spicb,
-//  /* HW dependent part.*/
-//  GPIOB,
-//  12,
-//  SPI_CR1_DFF
-//};
 
 static const I2CConfig i2ccfg1 = 
 {
@@ -151,69 +94,7 @@ static const I2CConfig i2ccfg1 =
 	FAST_DUTY_CYCLE_2
 };
 
-static const I2CConfig i2ccfg2 = {
-    OPMODE_I2C,
-		3000000, //100000, //
-    FAST_DUTY_CYCLE_16_9, //STD_DUTY_CYCLE, //
-};
-/*
- * PWM cyclic callback.
- * A new ADC conversion is started.
- */
-//static void pwmpcb(PWMDriver *pwmp) {
 
-//  (void)pwmp;
-
-//  /* Starts an asynchronous ADC conversion operation, the conversion
-//     will be executed in parallel to the current PWM cycle and will
-//     terminate before the next PWM cycle.*/
-//  chSysLockFromIsr();
-//  adcStartConversionI(&ADCD1, &adcgrpcfg, samples, ADC_GRP1_BUF_DEPTH);
-//  chSysUnlockFromIsr();
-//}
-
-/*
- * ADC end conversion callback.
- * The PWM channels are reprogrammed using the latest ADC samples.
- * The latest samples are transmitted into a single SPI transaction.
- */
-//void adccb(ADCDriver *adcp, adcsample_t *buffer, size_t n) {
-
-//  (void) buffer; (void) n;
-//  /* Note, only in the ADC_COMPLETE state because the ADC driver fires an-
-//     intermediate callback when the buffer is half full.*/
-//  if (adcp->state == ADC_COMPLETE) {
-//    adcsample_t avg_ch1, avg_ch2;
-
-//    /* Calculates the average values from the ADC samples.*/
-//    avg_ch1 = (samples[0] + samples[2] + samples[4] + samples[6]) / 4;
-//    avg_ch2 = (samples[1] + samples[3] + samples[5] + samples[7]) / 4;
-
-//    chSysLockFromIsr();
-
-//    /* Changes the channels pulse width, the change will be effective
-//       starting from the next cycle.*/
-//    pwmEnableChannelI(&PWMD4, 0, PWM_FRACTION_TO_WIDTH(&PWMD4, 4096, avg_ch1));
-//    pwmEnableChannelI(&PWMD4, 1, PWM_FRACTION_TO_WIDTH(&PWMD4, 4096, avg_ch2));
-
-//    /* SPI slave selection and transmission start.*/
-//    spiSelectI(&SPID2);
-//    spiStartSendI(&SPID2, ADC_GRP1_NUM_CHANNELS * ADC_GRP1_BUF_DEPTH, samples);
-
-//    chSysUnlockFromIsr();
-//  }
-//}
-
-/*
- * SPI end transfer callback.
- */
-//static void spicb(SPIDriver *spip) {
-
-//  /* On transfer end just releases the slave select line.*/
-//  chSysLockFromIsr();
-//  spiUnselectI(spip);
-//  chSysUnlockFromIsr();
-//}
 
 static SerialConfig uartCfg=
 {
@@ -396,6 +277,87 @@ static msg_t ThreadRoulisTangage(void *arg)
 }
 
 
+void readUncompensatedTemperature(long_BMP085_reg *registres, int *uncompensatedTemperature)
+{
+		uint8_t txbuf[2] = {0};
+		uint8_t rawTemperature[2] = {0};
+
+		txbuf[0] = 0xF4; //Registrer address //Calibration data ac1
+		txbuf[1] = 0x2E; //Temperature
+		i2cAcquireBus(&I2CD1);	
+		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 2, NULL, 0, 100);
+		i2cReleaseBus(&I2CD1);
+		txbuf[0] = 0xF6;
+		i2cAcquireBus(&I2CD1);
+		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 100);
+		i2cMasterReceiveTimeout(&I2CD1, 0x77, rawTemperature, 2, 100);
+		i2cReleaseBus(&I2CD1);
+		
+		*uncompensatedTemperature = ((rawTemperature[0]<<8)+rawTemperature[1]);	
+}
+
+void readUncompensatedPressure(long_BMP085_reg *registres, long *uncompensatedPressure)
+{
+		uint8_t txbuf[2] = {0};
+		uint8_t rawPressure[3] = {0};
+
+		txbuf[0] = 0xF4; //Registrer address //Calibration data ac1
+		txbuf[1] = 0x34+(OSS<<6); //Temperature
+		i2cAcquireBus(&I2CD1);	
+		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 2, NULL, 0, 100);
+		i2cReleaseBus(&I2CD1);
+		txbuf[0] = 0xF6;
+		i2cAcquireBus(&I2CD1);
+		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 100);
+		i2cMasterReceiveTimeout(&I2CD1, 0x77, rawPressure, 3, 100);
+		i2cReleaseBus(&I2CD1);
+		printf("trololo");
+		*uncompensatedPressure = ((rawPressure[0]<<16)+(rawPressure[1]<<8)+rawPressure[2]);	
+}
+
+void calculateTemperature(long_BMP085_reg *registres, int *trueTemperature, PressureVar *variables, int *uncompensatedTemperature)
+{
+	variables->X1 = ((long)*uncompensatedTemperature-(registres->ac6))*(registres->ac5)>>15;
+	variables->X2 = (long)registres->mc<<11/(variables->X1+registres->md);
+	variables->B5 = variables->X1+variables->X2;
+	*trueTemperature = (variables->B5+8)>>4;
+}
+
+void calculatePressure(long_BMP085_reg *registres, long *pressure, PressureVar *variables)
+{
+	int uncompensatedTemperature;
+	long uncompensatedPressure;
+	int temperature;
+	
+	readUncompensatedTemperature(registres, &uncompensatedTemperature);
+	readUncompensatedPressure(registres, &uncompensatedPressure);
+	calculateTemperature(registres, &temperature, variables, &uncompensatedTemperature);
+	
+	variables->B6 = variables->B5-4000; 																					//OK
+	variables->X1 = ((registres->b2)*((variables->B6)*(variables->B6))>>12)>>11; 	//NOK
+	variables->X2 = registres->ac2*variables->B6>>11;															//OK
+	variables->X3 = variables->X1+variables->X2;																	//OK	
+	variables->B3 = (((int32_t)registres->ac1*4+variables->X3)<<(OSS+2))>>2; 			//OK
+	variables->X1 = registres->ac3*variables->B6>>13;															//OK
+	variables->X2 = (registres->b1*(variables->B6*variables->B6>>12))>>16;				// pas test
+	variables->X3 = ((variables->X1+variables->X2)+2)>>2;													// pas test
+	variables->B4 = registres->ac4*(uint32_t)(variables->X3+32768)>>15;						//NOK
+	variables->B7 = ((uint32_t)uncompensatedPressure-variables->B3)*(50000>>OSS);	//OK
+
+	if(variables->B7 < 0x80000000)
+	{
+		*pressure = (variables->B7*2)/variables->B4;																//NOK
+	}
+	else
+	{
+		*pressure = (variables->B7/variables->B4)*2;																//NOK
+	}
+	variables->X1 = (*pressure>>8)*(*pressure>>8);																//OK
+	variables->X1 = (variables->X1*3038)>>16;																			//NOK
+	variables->X2 = (-7357**pressure)>>16;																				//NOK
+	*pressure = *pressure+((variables->X1+variables->X2+3791)>>4);								//NOK
+}
+
 
 static WORKING_AREA(waAltitude, 128);
 static msg_t ThreadAltitude(void *arg)
@@ -403,6 +365,9 @@ static msg_t ThreadAltitude(void *arg)
 	uint8_t txbuf[10] = {0};
 	BMP085_reg registres;
 	long_BMP085_reg long_registres;
+	PressureVar variablesPression;
+	long pressure = 0;
+	long altitude = 0;
 
 	txbuf[0] = 0xAA; //Calibration data ac1
 	i2cAcquireBus(&I2CD1);	
@@ -482,6 +447,13 @@ static msg_t ThreadAltitude(void *arg)
 	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.md, 2, 1000);
 	i2cReleaseBus(&I2CD1);
 	long_registres.md = (registres.md[0]<<8)+registres.md[1];
+	
+	while(TRUE)
+	{
+		calculatePressure(&long_registres, &pressure, &variablesPression);
+		altitude = 44330*(1-pow((pressure/1013.25), (1/5.255)));
+		sprintf(stringAltitude, "A%05ld", altitude);
+	}
 }
 
 static WORKING_AREA(waIntelligence, 128);
@@ -538,8 +510,6 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &i2ccfg1);
-	i2cObjectInit(&I2CD2);
-	i2cStart(&I2CD2, &i2ccfg2);
 
 
   /*
@@ -559,8 +529,6 @@ int main(void) {
 
 //   */
   while (TRUE) {
-//    if (palReadPad(GPIOA, GPIOA_BUTTON))
-//      TestThread(&SD1);
     chThdSleepMilliseconds(500);
   }
 }

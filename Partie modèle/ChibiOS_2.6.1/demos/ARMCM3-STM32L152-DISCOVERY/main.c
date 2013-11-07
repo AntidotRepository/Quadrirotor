@@ -42,43 +42,6 @@ const I2CConfig *i2cConfig1;
 //Globale contenant les caractères à envoyer par la liaison sans fil. (peut être remplacer par des mailbox)
 char stringTangageRoulis[8] = {0};
 
-typedef struct BMP085_reg BMP085_reg;
-struct BMP085_reg
-{
-	uint8_t ac1[2]; //Registre 0xAA
-	uint8_t ac2[2]; //Registre 0xAC
-	uint8_t ac3[2]; //Registre 0xAE
-	uint8_t ac4[2]; //Registre 0xB0
-	uint8_t ac5[2]; //Registre 0xB2
-	uint8_t ac6[2]; //Registre 0xB4
-
-	uint8_t b1[2]; //Registre 0xB6
-	uint8_t b2[2]; //Registre 0xB8
-
-	uint8_t mb[2]; //Registre 0xBA
-	uint8_t mc[2]; //Registre 0xBC
-	uint8_t md[2]; //Registre 0xBE
-	
-};
-
-typedef struct long_BMP085_reg long_BMP085_reg;
-struct long_BMP085_reg
-{
-	long ac1; //Registre 0xAA
-	long ac2; //Registre 0xAC
-	long ac3; //Registre 0xAE
-	long ac4; //Registre 0xB0
-	long ac5; //Registre 0xB2
-	long ac6; //Registre 0xB4
-
-	long b1; //Registre 0xB6
-	long b2; //Registre 0xB8
-
-	long mb; //Registre 0xBA
-	long mc; //Registre 0xBC
-	long md; //Registre 0xBE
-};
-
 
 //I2CConfig configI2C_1;
 //I2CDriver driverI2C_1;
@@ -399,89 +362,8 @@ static msg_t ThreadRoulisTangage(void *arg)
 
 static WORKING_AREA(waAltitude, 128);
 static msg_t ThreadAltitude(void *arg)
-{	
-	uint8_t txbuf[10] = {0};
-	BMP085_reg registres;
-	long_BMP085_reg long_registres;
-
-	txbuf[0] = 0xAA; //Calibration data ac1
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac1, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac1 = (registres.ac1[0]<<8)+registres.ac1[1];
-
-	txbuf[0] = 0xAC; //Calibration data ac2
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac2, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac2 = (registres.ac2[0]<<8)+registres.ac2[1];
-	//récupération de ac3
-	txbuf[0] = 0xAE; //Calibration data ac3
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac3, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac3 = (registres.ac3[0]<<8)+registres.ac3[1];
-	//récupération de ac4
-	txbuf[0] = 0xB0; //Calibration data ac4
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac4, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac4 = (registres.ac4[0]<<8)+registres.ac4[1];
-	//récupération de ac5
-	txbuf[0] = 0xB2; //Calibration data ac5
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac5, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac5 = (registres.ac5[0]<<8)+registres.ac5[1];
-	//récupération de ac6
-	txbuf[0] = 0xB4; //Calibration data ac6
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.ac6, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.ac6 = (registres.ac6[0]<<8)+registres.ac6[1];
+{
 	
-	//récupération de b1
-	txbuf[0] = 0xB6; //Calibration data b1
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.b1, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.b1 = (registres.b1[0]<<8)+registres.b1[1];
-	//récupération de b2
-	txbuf[0] = 0xB8; //Calibration data b2
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.b2, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.b2 = (registres.b2[0]<<8)+registres.b2[1];
-
-	//récupération de mb
-	txbuf[0] = 0xBA; //Calibration data mb
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.mb, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.mb = (registres.mb[0]<<8)+registres.mb[1];
-	//récupération de mc
-	txbuf[0] = 0xBA; //Calibration data mc
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.mc, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.mc = (registres.mc[0]<<8)+registres.mc[1];
-	//récupération de md
-	txbuf[0] = 0xBC; //Calibration data md
-	i2cAcquireBus(&I2CD1);	
-	i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 1000);
-	i2cMasterReceiveTimeout(&I2CD1, 0x77, registres.md, 2, 1000);
-	i2cReleaseBus(&I2CD1);
-	long_registres.md = (registres.md[0]<<8)+registres.md[1];
 }
 
 static WORKING_AREA(waIntelligence, 128);
@@ -541,6 +423,45 @@ int main(void) {
 	i2cObjectInit(&I2CD2);
 	i2cStart(&I2CD2, &i2ccfg2);
 
+//  /*
+//   * If the user button is pressed after the reset then the test suite is
+//   * executed immediately before activating the various device drivers in
+//   * order to not alter the benchmark scores.
+//   */
+//  if (palReadPad(GPIOA, GPIOA_BUTTON))
+//    TestThread(&SD1);
+
+//  /*
+//   * Initializes the SPI driver 2. The SPI2 signals are routed as follow:
+//   * PB12 - NSS.
+//   * PB13 - SCK.
+//   * PB14 - MISO.
+//   * PB15 - MOSI.
+//   */
+//  spiStart(&SPID2, &spicfg);
+//  palSetPad(GPIOB, 12);
+//  palSetPadMode(GPIOB, 12, PAL_MODE_OUTPUT_PUSHPULL |
+//                           PAL_STM32_OSPEED_HIGHEST);           /* NSS.     */
+//  palSetPadMode(GPIOB, 13, PAL_MODE_ALTERNATE(5) |
+//                           PAL_STM32_OSPEED_HIGHEST);           /* SCK.     */
+//  palSetPadMode(GPIOB, 14, PAL_MODE_ALTERNATE(5));              /* MISO.    */
+//  palSetPadMode(GPIOB, 15, PAL_MODE_ALTERNATE(5) |
+//                           PAL_STM32_OSPEED_HIGHEST);           /* MOSI.    */
+
+//  /*
+//   * Initializes the ADC driver 1 and enable the thermal sensor.
+//   * The pin PC0 on the port GPIOC is programmed as analog input.
+//   */
+//  adcStart(&ADCD1, NULL);
+//  adcSTM32EnableTSVREFE();
+//  palSetPadMode(GPIOC, 0, PAL_MODE_INPUT_ANALOG);
+
+//  /*
+//   * Initializes the PWM driver 4, routes the TIM4 outputs to the board LEDs.
+//   */
+//  pwmStart(&PWMD4, &pwmcfg);
+//  palSetPadMode(GPIOB, GPIOB_LED4, PAL_MODE_ALTERNATE(2));
+//  palSetPadMode(GPIOB, GPIOB_LED3, PAL_MODE_ALTERNATE(2));
 
   /*
    * Creates the example thread.
@@ -549,7 +470,7 @@ int main(void) {
 	chThdCreateStatic(waComSnd, sizeof(waComSnd), NORMALPRIO, ThreadComSnd, NULL);
 //	chThdCreateStatic(waLacet, sizeof(waLacet), NORMALPRIO, ThreadLacet, NULL);
 	chThdCreateStatic(waRoulisTangage, sizeof(waRoulisTangage), NORMALPRIO, ThreadRoulisTangage, NULL);
-	chThdCreateStatic(waAltitude, sizeof(waAltitude), NORMALPRIO, ThreadAltitude, NULL);
+//	chThdCreateStatic(waAltitude, sizeof(waAltitude), NORMALPRIO, ThreadAltitude, NULL);
 //	chThdCreateStatic(waIntelligence, sizeof(waIntelligence), NORMALPRIO, ThreadIntelligence, NULL);
 //  /*
 //   * Normal main() thread activity, in this demo it does nothing except

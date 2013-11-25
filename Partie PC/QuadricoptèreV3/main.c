@@ -117,7 +117,7 @@ int main ( int argc, char** argv )
     pthread_t display;
 
     int ret = 0;
-    ret = initialization();
+//    ret = initialization();
 
     if(ret == 0)
     {

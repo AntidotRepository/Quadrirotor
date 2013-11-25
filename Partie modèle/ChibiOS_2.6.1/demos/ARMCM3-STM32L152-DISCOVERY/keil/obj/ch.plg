@@ -3,28 +3,15 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\Bibliothèque\Bureau\ChibiOS_2.6.1\demos\ARMCM3-STM32L152-DISCOVERY\keil\ch.uvproj
-Project File Date:  10/13/2013
+D:\Bibliothèque\Mes documents\Programmation\Quadricoptère\Partie modèle\ChibiOS_2.6.1\demos\ARMCM3-STM32L152-DISCOVERY\keil\ch.uvproj
+Project File Date:  11/16/2013
 
 <h2>Output:</h2>
 Build target 'Demo'
-compiling main.c...
-..\main.c(241): warning:  #1215-D: #warning directive: Revoir le deuxième paramètre (durer avant qu'on renvoi, peut être mettre TIME_INFINITE)
-..\main.c(367): warning:  #940-D: missing return statement at end of non-void function "ThreadAltitude"
-..\main.c(192): warning:  #177-D: variable "mb_Com" was declared but never referenced
-..\main.c(194): warning:  #177-D: variable "mb_Lacet" was declared but never referenced
-..\main.c(196): warning:  #177-D: variable "mb_Roulis_Tangage" was declared but never referenced
-..\main.c(198): warning:  #177-D: variable "mb_Altitude" was declared but never referenced
-..\main.c(246): warning:  #177-D: variable "waLacet" was declared but never referenced
-..\main.c(247): warning:  #177-D: function "ThreadLacet" was declared but never referenced
-..\main.c(363): warning:  #177-D: variable "waAltitude" was declared but never referenced
-..\main.c(364): warning:  #177-D: function "ThreadAltitude" was declared but never referenced
-..\main.c(369): warning:  #177-D: variable "waIntelligence" was declared but never referenced
-..\main.c(370): warning:  #177-D: function "ThreadIntelligence" was declared but never referenced
 linking...
-Program Size: Code=14696 RO-data=640 RW-data=40 ZI-data=4760  
-".\obj\ch.axf" - 0 Errors, 12 Warning(s).
-Load "D:\\Bibliothèque\\Bureau\\ChibiOS_2.6.1\\demos\\ARMCM3-STM32L152-DISCOVERY\\keil\\obj\\ch.axf" 
+Program Size: Code=24004 RO-data=788 RW-data=60 ZI-data=5908  
+".\obj\ch.axf" - 0 Errors, 0 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\ChibiOS_2.6.1\\demos\\ARMCM3-STM32L152-DISCOVERY\\keil\\obj\\ch.axf" 
 Erase Done.
 Programming Done.
 Verify OK.

@@ -8,6 +8,7 @@ Project File Date:  11/16/2013
 
 <h2>Output:</h2>
 Build target 'Demo'
+<<<<<<< HEAD
 linking...
 Program Size: Code=24004 RO-data=788 RW-data=60 ZI-data=5908  
 ".\obj\ch.axf" - 0 Errors, 0 Warning(s).
@@ -16,3 +17,46 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
+=======
+compiling main.c...
+..\main.c(168): warning:  #1215-D: #warning directive: Revoir le deuxième paramètre (durer avant qu'on renvoi, peut être mettre TIME_INFINITE)
+..\main.c(119): warning:  #177-D: variable "mb_Com" was declared but never referenced
+..\main.c(121): warning:  #177-D: variable "mb_Lacet" was declared but never referenced
+..\main.c(123): warning:  #177-D: variable "mb_Roulis_Tangage" was declared but never referenced
+..\main.c(125): warning:  #177-D: variable "mb_Altitude" was declared but never referenced
+..\main.c(173): warning:  #177-D: variable "waLacet" was declared but never referenced
+..\main.c(174): warning:  #177-D: function "ThreadLacet" was declared but never referenced
+..\main.c(468): warning:  #177-D: variable "waIntelligence" was declared but never referenced
+..\main.c(469): warning:  #177-D: function "ThreadIntelligence" was declared but never referenced
+linking...
+Program Size: Code=25092 RO-data=800 RW-data=60 ZI-data=5420  
+".\obj\ch.axf" - 0 Errors, 9 Warning(s).
+Build target 'Demo'
+compiling main.c...
+..\main.c(159): warning:  #1215-D: #warning directive: Revoir le deuxième paramètre (durer avant qu'on renvoi, peut être mettre TIME_INFINITE)
+..\main.c(514): error:  #20: identifier "i2ccfg2" is undefined
+..\main.c(110): warning:  #177-D: variable "mb_Com" was declared but never referenced
+..\main.c(112): warning:  #177-D: variable "mb_Lacet" was declared but never referenced
+..\main.c(114): warning:  #177-D: variable "mb_Roulis_Tangage" was declared but never referenced
+..\main.c(116): warning:  #177-D: variable "mb_Altitude" was declared but never referenced
+..\main.c(164): warning:  #177-D: variable "waLacet" was declared but never referenced
+..\main.c(165): warning:  #177-D: function "ThreadLacet" was declared but never referenced
+..\main.c(459): warning:  #177-D: variable "waIntelligence" was declared but never referenced
+..\main.c(460): warning:  #177-D: function "ThreadIntelligence" was declared but never referenced
+".\obj\ch.axf" - 1 Errors, 9 Warning(s).
+Target not created
+Build target 'Demo'
+compiling main.c...
+..\main.c(159): warning:  #1215-D: #warning directive: Revoir le deuxième paramètre (durer avant qu'on renvoi, peut être mettre TIME_INFINITE)
+..\main.c(110): warning:  #177-D: variable "mb_Com" was declared but never referenced
+..\main.c(112): warning:  #177-D: variable "mb_Lacet" was declared but never referenced
+..\main.c(114): warning:  #177-D: variable "mb_Roulis_Tangage" was declared but never referenced
+..\main.c(116): warning:  #177-D: variable "mb_Altitude" was declared but never referenced
+..\main.c(164): warning:  #177-D: variable "waLacet" was declared but never referenced
+..\main.c(165): warning:  #177-D: function "ThreadLacet" was declared but never referenced
+..\main.c(459): warning:  #177-D: variable "waIntelligence" was declared but never referenced
+..\main.c(460): warning:  #177-D: function "ThreadIntelligence" was declared but never referenced
+linking...
+Program Size: Code=25068 RO-data=784 RW-data=60 ZI-data=5420  
+".\obj\ch.axf" - 0 Errors, 9 Warning(s).
+>>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d

@@ -21,9 +21,8 @@
 #include <string.h>
 #include <math.h>
 
-#define OSS 0 //Oversampling settings (taux d'échantillonage du BMP085 compris entre 0 (faible taux mais peu énergivore) et 3 (8 échantillons avant envois mais très énergivore))
+#define OSS 3 //Oversampling settings (taux d'échantillonage du BMP085 compris entre 0 (faible taux mais peu énergivore) et 3 (8 échantillons avant envois mais très énergivore))
 
-<<<<<<< HEAD
 //static void pwmpcb(PWMDriver *pwmp);
 //static void adccb(ADCDriver *adcp, adcsample_t *buffer, size_t n);
 //static void spicb(SPIDriver *spip);
@@ -33,8 +32,6 @@
 
 ///* Depth of the conversion buffer, channels are sampled four times each.*/
 //#define ADC_GRP1_BUF_DEPTH			4
-=======
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 
 /* Max number of mail in the box. */
 #define MAILBOX_SIZE						1
@@ -43,12 +40,11 @@ I2CDriver *i2cDriver1;
 const I2CConfig *i2cConfig1;
 
 //Globale contenant les caractères à envoyer par la liaison sans fil. (peut être remplacer par des mailbox)
-char stringTangageRoulis[8] = {0};
-char stringAltitude[6] = {0};
-<<<<<<< HEAD
-char stringLacet[4] = {0};
-=======
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
+
+int g_tangage = 0;
+int g_roulis = 0;
+int g_altitude = 0;
+int g_lacet = 0;
 
 typedef struct PressureVar PressureVar;
 struct PressureVar
@@ -86,7 +82,6 @@ struct BMP085_reg
 typedef struct long_BMP085_reg long_BMP085_reg;
 struct long_BMP085_reg
 {
-<<<<<<< HEAD
 	short ac1; //Registre 0xAA
 	short ac2; //Registre 0xAC
 	short ac3; //Registre 0xAE
@@ -165,24 +160,6 @@ struct long_BMP085_reg
 //	12,
 //	SPI_CR1_DFF
 //};
-=======
-	int ac1; 					//Registre 0xAA
-	int ac2; 					//Registre 0xAC
-	int ac3; 					//Registre 0xAE
-	unsigned int ac4; //Registre 0xB0
-	unsigned int ac5; //Registre 0xB2
-	unsigned int ac6; //Registre 0xB4
-
-	int b1; 					//Registre 0xB6
-	int b2; 					//Registre 0xB8
-
-	int mb; 					//Registre 0xBA
-	int mc; 					//Registre 0xBC
-	int md; 					//Registre 0xBE
-};
-
-
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 
 static const I2CConfig i2ccfg1 = 
 {
@@ -191,7 +168,6 @@ static const I2CConfig i2ccfg1 =
 	FAST_DUTY_CYCLE_2
 };
 
-<<<<<<< HEAD
 static const I2CConfig i2ccfg2 = {
 		OPMODE_I2C,
 		3000000, //100000, //
@@ -255,9 +231,6 @@ static const I2CConfig i2ccfg2 = {
 //	spiUnselectI(spip);
 //	chSysUnlockFromIsr();
 //}
-=======
-
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 
 static SerialConfig uartCfg=
 {
@@ -314,12 +287,11 @@ static msg_t ThreadComRcv(void *arg)
 	{
 		//lecture de la boîte aux lettres.
 //		chMBFetch( &mb_Roulis_Tangage, 	stringTangageRoulis,	TIME_INFINITE);
-		sprintf(dataWrite, "%sL789A12345S", stringTangageRoulis);
+		sprintf(dataWrite, "T%03dR%03dL789A%05dS", g_tangage, g_roulis, g_altitude);
 		//Envois des données
 		sdWrite(&SD2, (uint8_t*)dataWrite, strlen(dataWrite));
-		
+
 		//Envoi dans la mailbox de communication
-		#warning Revoir le deuxième paramètre (durer avant qu on renvoi, peut être mettre TIME_INFINITE)
 //		chMBPost( &mb_Com, b_Com[MAILBOX_SIZE-1], 100);
 	}
 }
@@ -366,7 +338,7 @@ static msg_t ThreadLacet(void *arg)
 		angleNord = rxbuf[4]<<8;
 		angleNord = angleNord | (unsigned int)rxbuf[5];
 		
-		sprintf(stringLacet, "l%3d", angleNord);
+		g_lacet = angleNord;
 //		chMBPost( &mb_Lacet, b_Lacet[MAILBOX_SIZE-1], TIME_INFINITE);
 	}
 }
@@ -376,15 +348,12 @@ static msg_t ThreadRoulisTangage(void *arg)
 {
 	// gestion du Roulis et du tangage(gyroscope)
 	
-	
 	//tableau stockage données reçues sur l'I²C
 	uint8_t rxbuf[10] = {0};
 	uint8_t txbuf[10] = {0};
 
 	int tangage;
 	int roulis;
-
-
 
 	//Initialisation du gyroscope
 	txbuf[0] = 0x6B;																											//Registre
@@ -443,7 +412,7 @@ static msg_t ThreadRoulisTangage(void *arg)
 		
 		//récupération de GYRO_XOUT_Y
 		txbuf[0] = 0x3D; //Registre de GYRO_YOUT_H
-		i2cAcquireBus(&I2CD1);	
+		i2cAcquireBus(&I2CD1);
 		i2cMasterTransmitTimeout(&I2CD1, 0x68, txbuf, 1, rxbuf, 2, 1000);
 		i2cReleaseBus(&I2CD1);
 		//Réunion de l'octet de poids faible et de l'octet de poids fort
@@ -464,7 +433,11 @@ static msg_t ThreadRoulisTangage(void *arg)
 		}
 		
 		//Fabrication d'une chaine de caractères à envoyer
-		sprintf(stringTangageRoulis, "T%03dR%03d", tangage, roulis);
+		g_roulis = roulis;
+		g_tangage = tangage;
+		
+		tangage = 0;
+		roulis = 0;
 	}
 }
 
@@ -479,7 +452,6 @@ long readUncompensatedTemperature()
 		i2cReleaseBus(&I2CD1);
 		chThdSleepMilliseconds(5);
 
-<<<<<<< HEAD
 		txbuf[0] = 0xF6;
 		i2cAcquireBus(&I2CD1);
 		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, rawTemperature, 2, 100);
@@ -489,28 +461,6 @@ long readUncompensatedTemperature()
 }
 
 long readUncompensatedPressure()
-=======
-void readUncompensatedTemperature(long_BMP085_reg *registres, int *uncompensatedTemperature)
-{
-		uint8_t txbuf[2] = {0};
-		uint8_t rawTemperature[2] = {0};
-
-		txbuf[0] = 0xF4; //Registrer address //Calibration data ac1
-		txbuf[1] = 0x2E; //Temperature
-		i2cAcquireBus(&I2CD1);	
-		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 2, NULL, 0, 100);
-		i2cReleaseBus(&I2CD1);
-		txbuf[0] = 0xF6;
-		i2cAcquireBus(&I2CD1);
-		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 100);
-		i2cMasterReceiveTimeout(&I2CD1, 0x77, rawTemperature, 2, 100);
-		i2cReleaseBus(&I2CD1);
-		
-		*uncompensatedTemperature = ((rawTemperature[0]<<8)+rawTemperature[1]);	
-}
-
-void readUncompensatedPressure(long_BMP085_reg *registres, long *uncompensatedPressure)
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 {
 		uint8_t txbuf[2] = {0};
 		uint8_t rawPressure[3] = {0};
@@ -520,7 +470,6 @@ void readUncompensatedPressure(long_BMP085_reg *registres, long *uncompensatedPr
 		i2cAcquireBus(&I2CD1);	
 		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 2, NULL, 0, 100);
 		i2cReleaseBus(&I2CD1);
-<<<<<<< HEAD
 		chThdSleepMilliseconds(26);
 
 		txbuf[0] = 0xF6;
@@ -540,32 +489,11 @@ long calculateTemperature(long_BMP085_reg long_registres, PressureVar *variables
 }
 
 long calculatePressure(long_BMP085_reg long_registres, PressureVar *variables)
-=======
-		txbuf[0] = 0xF6;
-		i2cAcquireBus(&I2CD1);
-		i2cMasterTransmitTimeout(&I2CD1, 0x77, txbuf, 1, NULL, 0, 100);
-		i2cMasterReceiveTimeout(&I2CD1, 0x77, rawPressure, 3, 100);
-		i2cReleaseBus(&I2CD1);
-		printf("trololo");
-		*uncompensatedPressure = ((rawPressure[0]<<16)+(rawPressure[1]<<8)+rawPressure[2]);	
-}
-
-void calculateTemperature(long_BMP085_reg *registres, int *trueTemperature, PressureVar *variables, int *uncompensatedTemperature)
 {
-	variables->X1 = ((long)*uncompensatedTemperature-(registres->ac6))*(registres->ac5)>>15;
-	variables->X2 = (long)registres->mc<<11/(variables->X1+registres->md);
-	variables->B5 = variables->X1+variables->X2;
-	*trueTemperature = (variables->B5+8)>>4;
-}
-
-void calculatePressure(long_BMP085_reg *registres, long *pressure, PressureVar *variables)
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
-{
-	int uncompensatedTemperature;
-	long uncompensatedPressure;
-	int temperature;
-<<<<<<< HEAD
-	long pressure;
+	int uncompensatedTemperature = 0;
+	long uncompensatedPressure = 0;
+	int temperature = 0;
+	long pressure = 0; 
 
 	uncompensatedTemperature = readUncompensatedTemperature();
 	uncompensatedPressure = readUncompensatedPressure();
@@ -596,38 +524,6 @@ void calculatePressure(long_BMP085_reg *registres, long *pressure, PressureVar *
 	pressure = pressure+(variables->X1+variables->X2+3791)/pow(2,4);	
 	return pressure;
 }
-=======
-	
-	readUncompensatedTemperature(registres, &uncompensatedTemperature);
-	readUncompensatedPressure(registres, &uncompensatedPressure);
-	calculateTemperature(registres, &temperature, variables, &uncompensatedTemperature);
-	
-	variables->B6 = variables->B5-4000; 																					//OK
-	variables->X1 = ((registres->b2)*((variables->B6)*(variables->B6))>>12)>>11; 	//NOK
-	variables->X2 = registres->ac2*variables->B6>>11;															//OK
-	variables->X3 = variables->X1+variables->X2;																	//OK	
-	variables->B3 = (((int32_t)registres->ac1*4+variables->X3)<<(OSS+2))>>2; 			//OK
-	variables->X1 = registres->ac3*variables->B6>>13;															//OK
-	variables->X2 = (registres->b1*(variables->B6*variables->B6>>12))>>16;				// pas test
-	variables->X3 = ((variables->X1+variables->X2)+2)>>2;													// pas test
-	variables->B4 = registres->ac4*(uint32_t)(variables->X3+32768)>>15;						//NOK
-	variables->B7 = ((uint32_t)uncompensatedPressure-variables->B3)*(50000>>OSS);	//OK
-
-	if(variables->B7 < 0x80000000)
-	{
-		*pressure = (variables->B7*2)/variables->B4;																//NOK
-	}
-	else
-	{
-		*pressure = (variables->B7/variables->B4)*2;																//NOK
-	}
-	variables->X1 = (*pressure>>8)*(*pressure>>8);																//OK
-	variables->X1 = (variables->X1*3038)>>16;																			//NOK
-	variables->X2 = (-7357**pressure)>>16;																				//NOK
-	*pressure = *pressure+((variables->X1+variables->X2+3791)>>4);								//NOK
-}
-
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 
 static WORKING_AREA(waAltitude, 128);
 static msg_t ThreadAltitude(void *arg)
@@ -642,11 +538,6 @@ static msg_t ThreadAltitude(void *arg)
 	BMP085_reg registres;
 	long_BMP085_reg long_registres;
 	PressureVar variablesPression;
-<<<<<<< HEAD
-=======
-	long pressure = 0;
-	long altitude = 0;
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 
 	long pressure = 0;
 	long altitude = 0;
@@ -738,13 +629,12 @@ static msg_t ThreadAltitude(void *arg)
 	i2cReleaseBus(&I2CD1);
 	long_registres.md = (registres.md[0]<<8)+registres.md[1];
 	
-<<<<<<< HEAD
 	pressure0 = calculatePressure(long_registres, &variablesPression);
 	while(TRUE)
 	{
 		pressure = calculatePressure(long_registres, &variablesPression);
 		altitude = 44330.75*(1-pow((double)pressure/pressure0, 0.19029))*100;
-		sprintf(stringAltitude, "A%05ld", altitude);
+		g_altitude = altitude;
 	}
 
 //		int i = 0;
@@ -767,14 +657,6 @@ static msg_t ThreadAltitude(void *arg)
 //			data[i] =	rReg[0];
 //			cmd += 2;
 //		}
-=======
-	while(TRUE)
-	{
-		calculatePressure(&long_registres, &pressure, &variablesPression);
-		altitude = 44330*(1-pow((pressure/1013.25), (1/5.255)));
-		sprintf(stringAltitude, "A%05ld", altitude);
-	}
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 }
 
 static WORKING_AREA(waIntelligence, 128);
@@ -831,6 +713,8 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &i2ccfg1);
+	i2cObjectInit(&I2CD2);
+	i2cStart(&I2CD2, &i2ccfg2);
 
 //	/*
 //	 * If the user button is pressed after the reset then the test suite is
@@ -878,10 +762,9 @@ int main(void) {
 	chThdCreateStatic(waComRcv, sizeof(waComRcv), NORMALPRIO, ThreadComRcv, NULL);
 	chThdCreateStatic(waComSnd, sizeof(waComSnd), NORMALPRIO, ThreadComSnd, NULL);
 //	chThdCreateStatic(waLacet, sizeof(waLacet), NORMALPRIO, ThreadLacet, NULL);
-//	chThdCreateStatic(waRoulisTangage, sizeof(waRoulisTangage), NORMALPRIO, ThreadRoulisTangage, NULL);
+	chThdCreateStatic(waRoulisTangage, sizeof(waRoulisTangage)+2000, NORMALPRIO, ThreadRoulisTangage, NULL);
 	chThdCreateStatic(waAltitude, sizeof(waAltitude)+1000, NORMALPRIO, ThreadAltitude, NULL);
 //	chThdCreateStatic(waIntelligence, sizeof(waIntelligence), NORMALPRIO, ThreadIntelligence, NULL);
-<<<<<<< HEAD
 //	/*
 //	 * Normal main() thread activity, in this demo it does nothing except
 //	 * sleeping in a loop and check the button state, when the button is
@@ -894,16 +777,4 @@ int main(void) {
 //			TestThread(&SD1);
 		chThdSleepMilliseconds(500);
 	}
-=======
-//  /*
-//   * Normal main() thread activity, in this demo it does nothing except
-//   * sleeping in a loop and check the button state, when the button is
-//   * pressed the test procedure is launched with output on the serial
-//   * driver 1.
-
-//   */
-  while (TRUE) {
-    chThdSleepMilliseconds(500);
-  }
->>>>>>> 6bd463bd257ee40e00cb29f028e30d9d1656670d
 }

@@ -7,6 +7,7 @@
 #include <time.h>
 #include <SDL/SDL_ttf.h>
 #include <pthread.h>
+
 #include <string.h>
 
 #define HAUTEURFENETRE 600
@@ -356,6 +357,7 @@ void dataSending(void *data)
     while(!in.key[SDLK_ESCAPE] && !in.quit && g_run)
     {
         debutBoucle = SDL_GetTicks();
+        updateEvents();
 
         //envoi des valeurs
         char bufLettre = 0;
@@ -586,7 +588,7 @@ void displaying(void *data)
     {
         debutBoucle = SDL_GetTicks();
 
-        updateEvents();
+//        updateEvents();
 
         SDL_FillRect(ecran, NULL, SDL_MapRGB(ecran->format, 116, 124, 121));
 

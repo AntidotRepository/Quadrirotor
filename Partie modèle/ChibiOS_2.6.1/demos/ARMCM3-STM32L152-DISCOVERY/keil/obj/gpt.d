@@ -51,7 +51,6 @@
 .\obj\gpt.o: ..\..\..\os\hal\include\pal.h
 .\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\GPIOv2\pal_lld.h
 .\obj\gpt.o: ..\..\..\os\hal\include\adc.h
-.\obj\gpt.o: ..\..\..\os\hal\platforms\STM32L1xx\adc_lld.h
 .\obj\gpt.o: ..\..\..\os\hal\include\can.h
 .\obj\gpt.o: ..\..\..\os\hal\include\ext.h
 .\obj\gpt.o: ..\..\..\os\hal\include\gpt.h
@@ -67,7 +66,6 @@
 .\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\USARTv1\serial_lld.h
 .\obj\gpt.o: ..\..\..\os\hal\include\sdc.h
 .\obj\gpt.o: ..\..\..\os\hal\include\spi.h
-.\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\SPIv1\spi_lld.h
 .\obj\gpt.o: ..\..\..\os\hal\include\uart.h
 .\obj\gpt.o: ..\..\..\os\hal\include\usb.h
 .\obj\gpt.o: ..\..\..\os\hal\include\mmc_spi.h

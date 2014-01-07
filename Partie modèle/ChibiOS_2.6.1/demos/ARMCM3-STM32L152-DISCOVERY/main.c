@@ -23,7 +23,7 @@
 
 #define OSS 3 //Oversampling settings (taux d'échantillonage du BMP085 compris entre 0 (faible taux mais peu énergivore) et 3 (8 échantillons avant envois mais très énergivore))
 
-//static void pwmpcb(PWMDriver *pwmp);
+//static void pwmpcb1(PWMDriver *pwmp);
 //static void adccb(ADCDriver *adcp, adcsample_t *buffer, size_t n);
 //static void spicb(SPIDriver *spip);
 
@@ -45,6 +45,142 @@ int g_tangage = 0;
 int g_roulis = 0;
 int g_altitude = 0;
 int g_lacet = 0;
+
+//static void pwmpcb1(PWMDriver *pwmp) {
+
+//  (void)pwmp;
+
+//  /* Starts an asynchronous ADC conversion operation, the conversion
+//     will be executed in parallel to the current PWM cycle and will
+//     terminate before the next PWM cycle.*/
+////  chSysLockFromIsr();
+////  adcStartConversionI(&ADCD1, &adcgrpcfg, samples, ADC_GRP1_BUF_DEPTH);
+////  chSysUnlockFromIsr();
+//	palClearPad(GPIOB, GPIOB_PIN15);
+//}
+
+static void pwmc1cb(PWMDriver *pwmp) {
+
+  (void)pwmp;
+  palSetPad(GPIOB, GPIOB_PIN15);
+}
+
+//static PWMConfig pwmcfg1 = {
+//  10000,                                    /* 10kHz PWM clock frequency.   */
+//  10000,                                    /* PWM period 1S (in ticks).    */
+//  pwmpcb1,
+//  {
+//    {PWM_OUTPUT_ACTIVE_HIGH, pwmc1cb},
+//    {PWM_OUTPUT_ACTIVE_HIGH, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL}
+//  },
+//  /* HW dependent part.*/
+//  0,
+//  0
+//};
+//static void pwmpcb2(PWMDriver *pwmp) {
+
+//  (void)pwmp;
+
+//  /* Starts an asynchronous ADC conversion operation, the conversion
+//     will be executed in parallel to the current PWM cycle and will
+//     terminate before the next PWM cycle.*/
+////  chSysLockFromIsr();
+////  adcStartConversionI(&ADCD1, &adcgrpcfg, samples, ADC_GRP1_BUF_DEPTH);
+////  chSysUnlockFromIsr();
+//	palClearPad(GPIOB, GPIOB_PIN14);
+//}
+
+static void pwmc2cb(PWMDriver *pwmp) {
+
+  (void)pwmp;
+  palSetPad(GPIOB, GPIOB_PIN14);
+}
+
+//static PWMConfig pwmcfg2 = {
+//  10000,                                    /* 10kHz PWM clock frequency.   */
+//  10000,                                    /* PWM period 1S (in ticks).    */
+//  pwmpcb2,
+//  {
+//    {PWM_OUTPUT_ACTIVE_HIGH, pwmc2cb},
+//    {PWM_OUTPUT_ACTIVE_HIGH, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL}
+//  },
+//  /* HW dependent part.*/
+//  0,
+//  0
+//};
+//static void pwmpcb3(PWMDriver *pwmp) {
+
+//  (void)pwmp;
+
+//  /* Starts an asynchronous ADC conversion operation, the conversion
+//     will be executed in parallel to the current PWM cycle and will
+//     terminate before the next PWM cycle.*/
+////  chSysLockFromIsr();
+////  adcStartConversionI(&ADCD1, &adcgrpcfg, samples, ADC_GRP1_BUF_DEPTH);
+////  chSysUnlockFromIsr();
+//	palClearPad(GPIOB, GPIOB_PIN13);
+//}
+
+static void pwmc3cb(PWMDriver *pwmp) {
+
+  (void)pwmp;
+  palSetPad(GPIOB, GPIOB_PIN13);
+}
+
+//static PWMConfig pwmcfg3 = {
+//  10000,                                    /* 10kHz PWM clock frequency.   */
+//  10000,                                    /* PWM period 1S (in ticks).    */
+//  pwmpcb3,
+//  {
+//    {PWM_OUTPUT_ACTIVE_HIGH, pwmc3cb},
+//    {PWM_OUTPUT_ACTIVE_HIGH, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL},
+//    {PWM_OUTPUT_DISABLED, NULL}
+//  },
+//  /* HW dependent part.*/
+//  0,
+//  0
+//};
+static void pwmpcb4(PWMDriver *pwmp) {
+
+  (void)pwmp;
+
+  /* Starts an asynchronous ADC conversion operation, the conversion
+     will be executed in parallel to the current PWM cycle and will
+     terminate before the next PWM cycle.*/
+//  chSysLockFromIsr();
+//  adcStartConversionI(&ADCD1, &adcgrpcfg, samples, ADC_GRP1_BUF_DEPTH);
+//  chSysUnlockFromIsr();
+	palClearPad(GPIOB, GPIOB_PIN12);
+	palClearPad(GPIOB, GPIOB_PIN13);
+	palClearPad(GPIOB, GPIOB_PIN14);
+	palClearPad(GPIOB, GPIOB_PIN15);
+}
+
+static void pwmc4cb(PWMDriver *pwmp) {
+
+  (void)pwmp;
+  palSetPad(GPIOB, GPIOB_PIN12);
+}
+
+static PWMConfig pwmcfg4 = {
+  10000,                                    /* 10kHz PWM clock frequency.   */
+  20,                                    /* PWM period 1S (in ticks).    */
+  pwmpcb4,
+  {
+    {PWM_OUTPUT_ACTIVE_HIGH, pwmc1cb},
+    {PWM_OUTPUT_ACTIVE_HIGH, pwmc2cb},
+    {PWM_OUTPUT_ACTIVE_HIGH, pwmc3cb},
+    {PWM_OUTPUT_ACTIVE_HIGH, pwmc4cb}
+  },
+  /* HW dependent part.*/
+  0,
+  0
+};
 
 typedef struct PressureVar PressureVar;
 struct PressureVar
@@ -133,10 +269,10 @@ struct long_BMP085_reg
  * Cyclic callback enabled, channels 1 and 2 enabled without callbacks,
  * the active state is a logic one.
  */
-//static PWMConfig pwmcfg = {
+//static PWMConfig pwmcfg1 = {
 //	10000,																		/* 10kHz PWM clock frequency.	 */
 //	10000,																		/* PWM period 1S (in ticks).		*/
-//	pwmpcb,
+//	pwmpcb1,
 //	{
 //		{PWM_OUTPUT_ACTIVE_HIGH, NULL},
 //		{PWM_OUTPUT_ACTIVE_HIGH, NULL},
@@ -168,16 +304,11 @@ static const I2CConfig i2ccfg1 =
 	FAST_DUTY_CYCLE_2
 };
 
-static const I2CConfig i2ccfg2 = {
-		OPMODE_I2C,
-		3000000, //100000, //
-		FAST_DUTY_CYCLE_16_9, //STD_DUTY_CYCLE, //
-};
 /*
  * PWM cyclic callback.
  * A new ADC conversion is started.
  */
-//static void pwmpcb(PWMDriver *pwmp) {
+//static void pwmpcb1(PWMDriver *pwmp) {
 
 //	(void)pwmp;
 
@@ -713,9 +844,25 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &i2ccfg1);
-	i2cObjectInit(&I2CD2);
-	i2cStart(&I2CD2, &i2ccfg2);
 
+	pwmStart(&PWMD4, &pwmcfg4);
+//	pwmStart(&PWMD3, &pwmcfg3);
+//	pwmStart(&PWMD2, &pwmcfg2);
+//	pwmStart(&PWMD9, &pwmcfg1);
+
+	palSetPadMode(GPIOB, GPIOB_PIN12, PAL_MODE_OUTPUT_PUSHPULL);
+	palSetPadMode(GPIOB, GPIOB_PIN13, PAL_MODE_OUTPUT_PUSHPULL);
+	palSetPadMode(GPIOB, GPIOB_PIN14, PAL_MODE_OUTPUT_PUSHPULL);
+	palSetPadMode(GPIOB, GPIOB_PIN15, PAL_MODE_OUTPUT_PUSHPULL);
+
+//  pwmEnableChannel(&PWMD4, 0, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 7500));
+//  pwmEnableChannel(&PWMD4, 1, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 5000));
+//  pwmEnableChannel(&PWMD4, 2, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 2500));
+//  pwmEnableChannel(&PWMD4, 3, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 1000));
+  pwmEnableChannel(&PWMD4, 0, 20-10);
+  pwmEnableChannel(&PWMD4, 1, 20-10);
+  pwmEnableChannel(&PWMD4, 2, 20-10);
+  pwmEnableChannel(&PWMD4, 3, 20-10);
 //	/*
 //	 * If the user button is pressed after the reset then the test suite is
 //	 * executed immediately before activating the various device drivers in
@@ -752,7 +899,7 @@ int main(void) {
 //	/*
 //	 * Initializes the PWM driver 4, routes the TIM4 outputs to the board LEDs.
 //	 */
-//	pwmStart(&PWMD4, &pwmcfg);
+//	pwmStart(&PWMD4, &pwmcfg1);
 //	palSetPadMode(GPIOB, GPIOB_LED4, PAL_MODE_ALTERNATE(2));
 //	palSetPadMode(GPIOB, GPIOB_LED3, PAL_MODE_ALTERNATE(2));
 
@@ -763,7 +910,7 @@ int main(void) {
 	chThdCreateStatic(waComSnd, sizeof(waComSnd), NORMALPRIO, ThreadComSnd, NULL);
 //	chThdCreateStatic(waLacet, sizeof(waLacet), NORMALPRIO, ThreadLacet, NULL);
 	chThdCreateStatic(waRoulisTangage, sizeof(waRoulisTangage)+2000, NORMALPRIO, ThreadRoulisTangage, NULL);
-	chThdCreateStatic(waAltitude, sizeof(waAltitude)+1000, NORMALPRIO, ThreadAltitude, NULL);
+//chThdCreateStatic(waAltitude, sizeof(waAltitude)+1000, NORMALPRIO, ThreadAltitude, NULL);
 //	chThdCreateStatic(waIntelligence, sizeof(waIntelligence), NORMALPRIO, ThreadIntelligence, NULL);
 //	/*
 //	 * Normal main() thread activity, in this demo it does nothing except
@@ -775,6 +922,10 @@ int main(void) {
 	while (TRUE) {
 //		if (palReadPad(GPIOA, GPIOA_BUTTON))
 //			TestThread(&SD1);
+		pwmEnableChannel(&PWMD4, 0, 20-5);
+		pwmEnableChannel(&PWMD4, 1, 20-5);
+		pwmEnableChannel(&PWMD4, 2, 20-5);
+		pwmEnableChannel(&PWMD4, 3, 20-5);
 		chThdSleepMilliseconds(500);
 	}
 }

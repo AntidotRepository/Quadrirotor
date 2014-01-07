@@ -63,7 +63,7 @@
  * @note    The default is @p FALSE.
  */
 #if !defined(STM32_I2C_USE_I2C2) || defined(__DOXYGEN__)
-#define STM32_I2C_USE_I2C2              TRUE
+#define STM32_I2C_USE_I2C2              FALSE
 #endif
 
 /**

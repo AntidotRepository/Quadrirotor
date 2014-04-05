@@ -14,7 +14,7 @@
 #define LARGEURFENETRE 1000
 
 #define SENSITIVITY 0.5 //Facteur multiplicateur
-#define BAUDRATE 115200 //Surement à revoir pour l'adapter à la liaison
+#define BAUDRATE 9600 //Surement à revoir pour l'adapter à la liaison
 
 
 //prototypes
@@ -118,7 +118,7 @@ int main ( int argc, char** argv )
     pthread_t display;
 
     int ret = 0;
-    ret = initialization();
+    //ret = initialization();
 
     if(ret == 0)
     {
@@ -197,7 +197,7 @@ int initialization()
             }
             else
             {
-                config.BaudRate = 57600;             // Current baud
+                config.BaudRate = 9600;             // Current baud
                 config.fBinary = TRUE;               // Binary mode; no EOF check
                 config.fParity = TRUE;               // Enable parity checking
                 config.fOutxCtsFlow = FALSE;         // No CTS output flow control
@@ -576,8 +576,8 @@ void displaying(void *data)
     SDL_Surface *surfaceAltitude;
     SDL_Surface *surfaceAltitudeClavier;
 
-    SDL_WM_GrabInput(SDL_GRAB_ON);
-    SDL_ShowCursor(SDL_DISABLE);
+    //SDL_WM_GrabInput(SDL_GRAB_ON);
+    //SDL_ShowCursor(SDL_DISABLE);
 
     g_angleTangageSouris = g_angleTangageReel;
     g_angleRoulisSouris = g_angleRoulisReel;

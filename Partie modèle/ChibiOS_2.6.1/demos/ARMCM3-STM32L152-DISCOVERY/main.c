@@ -46,6 +46,29 @@ int g_roulis = 0;
 int g_altitude = 0;
 int g_lacet = 0;
 
+icucnt_t last_width, last_period;
+
+static void icuwidthcb(ICUDriver *icup) {
+
+  palSetPad(GPIOB, GPIOB_LED3);
+  last_width = icuGetWidth(icup);
+}
+
+static void icuperiodcb(ICUDriver *icup) {
+
+  palClearPad(GPIOB, GPIOB_LED3);
+  last_period = icuGetPeriod(icup);
+}
+
+static ICUConfig icucfg = {
+  ICU_INPUT_ACTIVE_HIGH,
+  10000,                                    /* 10kHz ICU clock frequency.   */
+  icuwidthcb,
+  icuperiodcb,
+  NULL,
+  ICU_CHANNEL_1,
+  0
+};
 //static void pwmpcb1(PWMDriver *pwmp) {
 
 //  (void)pwmp;
@@ -365,7 +388,7 @@ static const I2CConfig i2ccfg1 =
 
 static SerialConfig uartCfg=
 {
-	 57600,									/* Baudrate																					*/
+	 57600,		 							/* Baudrate																					*/
 	 0,											 /* cr1 register values															 */
 	 0,											 /* cr2 register values															 */
 	 0												/* cr3 register values															 */
@@ -405,7 +428,7 @@ static msg_t ThreadComRcv(void *arg)
 	
 	//Initialisation du module Xbee
 	// ...	
-
+//	icuStart(&ICUD2, &icucfg);
 	/*
 	 * Activates the serial driver 1 using the driver default configuration.
 	 * PA9 and PA10 are routed to USART1.
@@ -855,6 +878,9 @@ int main(void) {
 	palSetPadMode(GPIOB, GPIOB_PIN14, PAL_MODE_OUTPUT_PUSHPULL);
 	palSetPadMode(GPIOB, GPIOB_PIN15, PAL_MODE_OUTPUT_PUSHPULL);
 
+	icuStart(&ICUD2, &icucfg);
+	palSetPadMode(GPIOB, 11, PAL_MODE_ALTERNATE(2));
+	icuEnable(&ICUD2);
 //  pwmEnableChannel(&PWMD4, 0, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 7500));
 //  pwmEnableChannel(&PWMD4, 1, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 5000));
 //  pwmEnableChannel(&PWMD4, 2, PWM_PERCENTAGE_TO_WIDTH(&PWMD4, 2500));
@@ -863,6 +889,8 @@ int main(void) {
   pwmEnableChannel(&PWMD4, 1, 20-10);
   pwmEnableChannel(&PWMD4, 2, 20-10);
   pwmEnableChannel(&PWMD4, 3, 20-10);
+	
+	chThdSleepMilliseconds(5000);
 //	/*
 //	 * If the user button is pressed after the reset then the test suite is
 //	 * executed immediately before activating the various device drivers in

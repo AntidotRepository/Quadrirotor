@@ -58,10 +58,11 @@
 .\obj\mac_lld.o: ..\..\..\os\hal\include\i2c.h
 .\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\I2Cv1\i2c_lld.h
 .\obj\mac_lld.o: ..\..\..\os\hal\include\icu.h
+.\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\TIMv1\icu_lld.h
+.\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\mac_lld.o: ..\..\..\os\hal\include\mac.h
 .\obj\mac_lld.o: ..\..\..\os\hal\include\pwm.h
 .\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\TIMv1\pwm_lld.h
-.\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\mac_lld.o: ..\..\..\os\hal\include\rtc.h
 .\obj\mac_lld.o: ..\..\..\os\hal\include\serial.h
 .\obj\mac_lld.o: ..\..\..\os\hal\platforms\STM32\USARTv1\serial_lld.h

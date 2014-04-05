@@ -57,10 +57,11 @@
 .\obj\serial_usb.o: ..\..\..\os\hal\include\i2c.h
 .\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\I2Cv1\i2c_lld.h
 .\obj\serial_usb.o: ..\..\..\os\hal\include\icu.h
+.\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\TIMv1\icu_lld.h
+.\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\serial_usb.o: ..\..\..\os\hal\include\mac.h
 .\obj\serial_usb.o: ..\..\..\os\hal\include\pwm.h
 .\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\TIMv1\pwm_lld.h
-.\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\serial_usb.o: ..\..\..\os\hal\include\rtc.h
 .\obj\serial_usb.o: ..\..\..\os\hal\include\serial.h
 .\obj\serial_usb.o: ..\..\..\os\hal\platforms\STM32\USARTv1\serial_lld.h

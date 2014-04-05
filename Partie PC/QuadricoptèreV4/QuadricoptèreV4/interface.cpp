@@ -45,7 +45,7 @@ interface::interface() : QWidget()
     QImage *ima_trans_LacetSouris = new QImage();
 
     QTransform myTransform;
-    myTransform.rotate(90);
+    myTransform.rotate(0);
 
     lab_TangageBG->setPixmap(QPixmap::fromImage(*ima_TangageBG));
     lay_Backgrounds->addWidget(lab_TangageBG);

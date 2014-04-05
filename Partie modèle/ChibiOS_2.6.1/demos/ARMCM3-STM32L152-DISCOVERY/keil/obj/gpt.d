@@ -57,10 +57,11 @@
 .\obj\gpt.o: ..\..\..\os\hal\include\i2c.h
 .\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\I2Cv1\i2c_lld.h
 .\obj\gpt.o: ..\..\..\os\hal\include\icu.h
+.\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\TIMv1\icu_lld.h
+.\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\gpt.o: ..\..\..\os\hal\include\mac.h
 .\obj\gpt.o: ..\..\..\os\hal\include\pwm.h
 .\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\TIMv1\pwm_lld.h
-.\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\TIMv1\stm32_tim.h
 .\obj\gpt.o: ..\..\..\os\hal\include\rtc.h
 .\obj\gpt.o: ..\..\..\os\hal\include\serial.h
 .\obj\gpt.o: ..\..\..\os\hal\platforms\STM32\USARTv1\serial_lld.h

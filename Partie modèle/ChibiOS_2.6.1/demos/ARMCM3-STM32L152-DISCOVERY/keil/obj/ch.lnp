@@ -52,6 +52,7 @@
 ".\obj\adc_lld.o"
 ".\obj\hal_lld.o"
 ".\obj\i2c_lld.o"
+".\obj\icu_lld.o"
 ".\obj\test.o"
 ".\obj\testbmk.o"
 ".\obj\testdyn.o"

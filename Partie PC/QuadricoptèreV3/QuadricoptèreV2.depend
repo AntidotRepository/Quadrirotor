@@ -30,17 +30,17 @@
 	<math.h>
 	"SDL/SDL.h"
 
-1381065868 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.c
+1381069468 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.c
 	<windows.h>
 	<stdlib.h>
 	<string.h>
 	"SDL_rotozoom.h"
 
-1381065868 d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.h
+1381069468 d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\rotozoom\sdl_rotozoom.h
 	<math.h>
 	"SDL/SDL.h"
 
-1386875486 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\main.c
+1392111284 source:d:\bibliothèque\mes documents\programmation\quadricoptère\partie pc\quadricoptèrev3\main.c
 	<stdlib.h>
 	<stdio.h>
 	<Windows.h>

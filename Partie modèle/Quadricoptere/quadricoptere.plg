@@ -4,78 +4,371 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\Bibliothèque\Mes documents\Programmation\Quadricoptère\Partie modèle\Quadricoptere\quadricoptere.uvproj
-Project File Date:  03/20/2014
+Project File Date:  04/07/2014
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling alti.c...
-GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
-alti.c(27): warning:  #940-D: missing return statement at end of non-void function "readUncompensatedTemperature"
-alti.c(47): warning:  #940-D: missing return statement at end of non-void function "readUncompensatedPressure"
-linking...
-Program Size: Code=17796 RO-data=756 RW-data=36 ZI-data=3820  
-".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
-Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
-Clean started: Project: 'quadricoptere'
-   deleting intermediate output files for target 'Target 1'
-Rebuild target 'Target 1'
 compiling main.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
-main.c(48): warning:  #550-D: variable "temp" was set but never used
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(40): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(41): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling XBee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+linking...
+Program Size: Code=11988 RO-data=628 RW-data=24 ZI-data=4000  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+main.c(60): warning:  #177-D: variable "waCom" was declared but never referenced
+main.c(61): warning:  #177-D: function "ThreadCom" was declared but never referenced
+linking...
+Program Size: Code=11332 RO-data=608 RW-data=64 ZI-data=4000  
+".\quadricoptere.axf" - 0 Errors, 8 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
 compiling motor.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
 compiling gyro.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
 compiling XBee.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
 compiling alti.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
-alti.c(27): warning:  #940-D: missing return statement at end of non-void function "readUncompensatedTemperature"
-alti.c(47): warning:  #940-D: missing return statement at end of non-void function "readUncompensatedPressure"
-compiling board.c...
-compiling chlists.c...
-compiling chschd.c...
-compiling chsem.c...
-compiling chsys.c...
-compiling chthreads.c...
-compiling chvt.c...
-compiling chcond.c...
-compiling chdebug.c...
-compiling chdynamic.c...
-compiling chevents.c...
-compiling chheap.c...
-compiling chmboxes.c...
-compiling chmemcore.c...
-compiling chmempools.c...
-compiling chmsg.c...
-compiling chmtx.c...
-compiling chqueues.c...
-compiling chregistry.c...
-compiling hal.c...
-compiling pal.c...
-compiling pwm.c...
-compiling i2c.c...
-compiling serial.c...
-compiling pal_lld.c...
-compiling hal_lld.c...
-compiling stm32_dma.c...
-compiling pwm_lld.c...
-compiling i2c_lld.c...
-compiling serial_lld.c...
-compiling chcore.c...
-compiling chcore_v7m.c...
-compiling nvic.c...
-assembling chcoreasm_v7m.s...
-assembling cstartup.s...
-assembling vectors.s...
 linking...
-Program Size: Code=17796 RO-data=756 RW-data=36 ZI-data=3820  
-".\quadricoptere.axf" - 0 Errors, 8 Warning(s).
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling gyro.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling XBee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
 compiling alti.c...
 GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
 linking...
-Program Size: Code=17792 RO-data=752 RW-data=36 ZI-data=3820  
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling gyro.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling XBee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+compiling alti.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling gyro.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling XBee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+compiling alti.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12420 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12412 RO-data=628 RW-data=76 ZI-data=4308  
 ".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(99): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling gyro.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling XBee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+compiling alti.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12364 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 14 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(104): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12404 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(104): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12364 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(104): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12324 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12232 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Build target 'Target 1'
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12280 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(109): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12364 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 7 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(109): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12364 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12404 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(109): warning:  #177-D: variable "temp" was declared but never referenced
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=12532 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 7 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+XBee.h(56): warning:  #1295-D: Deprecated declaration getTangage - give arg types
+XBee.h(57): warning:  #1295-D: Deprecated declaration getRoulis - give arg types
+XBee.h(58): warning:  #1295-D: Deprecated declaration getLacet - give arg types
+XBee.h(60): warning:  #1295-D: Deprecated declaration getBattery - give arg types
+main.c(109): warning:  #177-D: variable "temp" was declared but never referenced
+linking...
+Program Size: Code=12532 RO-data=628 RW-data=76 ZI-data=4308  
+".\quadricoptere.axf" - 0 Errors, 6 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
 Clean started: Project: 'quadricoptere'
    deleting intermediate output files for target 'Target 1'

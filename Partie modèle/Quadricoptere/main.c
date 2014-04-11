@@ -21,8 +21,6 @@
 #include "XBee.h"
 #include "alti.h"
 
-
-
 static const I2CConfig g_i2ccfg = 
 {
 	OPMODE_I2C,
@@ -38,6 +36,59 @@ static const I2CConfig g_i2ccfg =
 	 0													/* cr3 register values															 */
 };
 
+
+static WORKING_AREA(waMotor, 128);
+static msg_t ThreadMotor( void *arg )
+{
+	initMotor();
+	
+	while(TRUE)
+	{
+		setSpeed(50, MOTOR_1);
+		setSpeed(50, MOTOR_2);
+		setSpeed(50, MOTOR_3);
+		setSpeed(50, MOTOR_4);
+		chThdSleepMilliseconds( 5000 );
+		setSpeed(80, MOTOR_1);
+		setSpeed(80, MOTOR_2);
+		setSpeed(80, MOTOR_3);
+		setSpeed(80, MOTOR_4);
+		chThdSleepMilliseconds( 5000 );
+	}
+}
+
+static WORKING_AREA(waCom, 128);
+static msg_t ThreadCom( void *arg )
+{
+	DATA_COMM data;
+	char bufSend[40]={0};
+	//SD2						T015R046L013A01245B095.26S051.01         "T000R000L000A00000B000000000S00000000000"
+	palSetPadMode(GPIOA, 2, PAL_MODE_ALTERNATE(7));
+	palSetPadMode(GPIOA, 3, PAL_MODE_ALTERNATE(7));
+
+	sdStart(&SD2, &uartCfg);
+	
+	//initXBee();
+	
+	while(TRUE)
+	{
+		data.tangage = 15;
+		data.roulis = 46;
+		data.lacet = 13;
+		data.altitude = 1245;
+		data.battery = 95;
+		data.signal = 51;
+
+//		sendData ( &data );
+			
+		sprintf(bufSend, "T%03dR%03dL%03dA%05dB%03dS%03d", data.tangage, data.roulis, data.lacet, data.altitude, data.battery, data.signal);
+		//sprintf(bufSend, "test");
+		sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
+		
+
+		chThdSleepMilliseconds( 10 );
+	}
+}
 
 
 /*
@@ -60,22 +111,19 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &g_i2ccfg);
-	
-	/*
-	* Serial initialization
-	*/
-	//SD2
-//	palSetPadMode(GPIOA, 2, PAL_MODE_ALTERNATE(7));
-//	palSetPadMode(GPIOA, 3, PAL_MODE_ALTERNATE(7));
 
-//	sdStart(&SD2, &uartCfg);
 	
 //	initGyro();
-//  initMotor();
-	initAlti();
-	while(TRUE)
+  
+//	initAlti();
+	
+	chThdCreateStatic(waMotor, sizeof(waMotor), NORMALPRIO, ThreadMotor, NULL);
+	chThdCreateStatic(waCom, sizeof(waCom), NORMALPRIO, ThreadCom, NULL);
+	
+	while(1)
 	{
 //		getAngle( AXIS_X );
-		temp = getAltitude();
+//		temp = getAltitude();
+		chThdSleepMilliseconds( 500 );
 	}
 }

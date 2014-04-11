@@ -57,11 +57,26 @@ void initMotor()
 	palSetPadMode(GPIOB, GPIOB_PIN14, PAL_MODE_OUTPUT_PUSHPULL);
 	palSetPadMode(GPIOB, GPIOB_PIN15, PAL_MODE_OUTPUT_PUSHPULL);
 	
-	// Set speed to 50% to initialize the variator ( Any motor start rotating )
+	// initialization sequence
 	setSpeed(50, MOTOR_1);
 	setSpeed(50, MOTOR_2);
 	setSpeed(50, MOTOR_3);
 	setSpeed(50, MOTOR_4);
+	chThdSleepMilliseconds(2000);
+	
+	setSpeed(100, MOTOR_1);
+	setSpeed(100, MOTOR_2);
+	setSpeed(100, MOTOR_3);
+	setSpeed(100, MOTOR_4);
+	
+	chThdSleepMilliseconds(2000);
+	
+	setSpeed(50, MOTOR_1);
+	setSpeed(50, MOTOR_2);
+	setSpeed(50, MOTOR_3);
+	setSpeed(50, MOTOR_4);
+	chThdSleepMilliseconds(1000);
+
 }
 
 void setSpeed(int speed, int motor)

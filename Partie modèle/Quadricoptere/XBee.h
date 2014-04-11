@@ -44,12 +44,19 @@ struct DATA_COMM
 	int 	roulis;
 	int 	lacet;
 	int 	altitude;
-	float battery;
-	float signal;
+	int battery;
+	int signal;
 };
 
+void initXBee( void );
 void sendData (DATA_COMM *data );
 DATA_COMM* rcvData( void );
 float getSignal( void );
+
+int getTangage();
+int getRoulis();
+int getLacet();
+//int getAltitude();
+float getBattery();
 
 #endif //XBEE_H

@@ -1,18 +1,49 @@
 #include "XBee.h"
 
+// Récupération de la qualité du signal
+icucnt_t last_width, last_period;
+static DATA_COMM *data = NULL;
 
+static void icuwidthcb(ICUDriver *icup) {
 
+  palSetPad(GPIOB, GPIOB_LED3);
+  last_width = icuGetWidth(icup);
+}
+
+static void icuperiodcb(ICUDriver *icup) {
+
+  palClearPad(GPIOB, GPIOB_LED3);
+  last_period = icuGetPeriod(icup);
+}
+
+static ICUConfig icucfg = {
+  ICU_INPUT_ACTIVE_HIGH,
+  10000,                                    /* 10kHz ICU clock frequency.   */
+  icuwidthcb,
+  icuperiodcb,
+  NULL,
+  ICU_CHANNEL_1,
+  0
+};
+
+void initXBee()
+{
+	// Initialisation entrée PWM qualité signal
+	icuStart(&ICUD3, &icucfg);
+	palSetPadMode(GPIOB, 11, PAL_MODE_ALTERNATE(2));
+	icuEnable(&ICUD3);
+}
+
+// Communication sans fils
 void sendData ( DATA_COMM *data )
 {
 	char bufSend[]="T000R000L000A00000B000S000";
-	sprintf(bufSend, "T%03dR%03dL%03dA%05dB%06.2fS%06.2f", data->tangage, data->roulis, data->lacet, data->altitude, data->battery, data->signal);
+//	sprintf(bufSend, "T%03dR%03dL%03dA%05dB%06.2fS%06.2f", data->tangage, data->roulis, data->lacet, data->altitude, data->battery, data->signal);
 	sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
 }
 
 DATA_COMM* rcvData()
-{
-	DATA_COMM *data = NULL;
-	
+{	
 	int i = 0;
 	int j = 0;
 	
@@ -37,9 +68,3 @@ DATA_COMM* rcvData()
 	return data;
 }
 
-float getSignal()
-{
-	//ToDo
-	//récupérer la PWM du XBee
-	return 0;
-}

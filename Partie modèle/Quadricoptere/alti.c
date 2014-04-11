@@ -203,7 +203,7 @@ void initAlti()
 	pressure0 = calculatePressure(/*g_long_registres, &variablesPression*/);
 }
 
-long getAltitude()
+long getAltitude( void )
 {
 	
 //	uint8_t txbuf[10] = {0};

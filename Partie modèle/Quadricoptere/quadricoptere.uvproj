@@ -417,6 +417,11 @@
               <FileType>1</FileType>
               <FilePath>.\alti.c</FilePath>
             </File>
+            <File>
+              <FileName>battery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\battery.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -572,6 +577,11 @@
               <FileType>1</FileType>
               <FilePath>.\OS\hal\src\serial.c</FilePath>
             </File>
+            <File>
+              <FileName>icu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\OS\hal\src\icu.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -606,6 +616,11 @@
               <FileName>serial_lld.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\OS\hal\platforms\STM32\USARTv1\serial_lld.c</FilePath>
+            </File>
+            <File>
+              <FileName>icu_lld.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\OS\hal\platforms\STM32\TIMv1\icu_lld.c</FilePath>
             </File>
           </Files>
         </Group>

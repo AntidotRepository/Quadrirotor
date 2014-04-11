@@ -58,10 +58,10 @@ void initMotor()
 	palSetPadMode(GPIOB, GPIOB_PIN15, PAL_MODE_OUTPUT_PUSHPULL);
 	
 	// initialization sequence
-	setSpeed(50, MOTOR_1);
-	setSpeed(50, MOTOR_2);
-	setSpeed(50, MOTOR_3);
-	setSpeed(50, MOTOR_4);
+	setSpeed(0, MOTOR_1);
+	setSpeed(0, MOTOR_2);
+	setSpeed(0, MOTOR_3);
+	setSpeed(0, MOTOR_4);
 	chThdSleepMilliseconds(2000);
 	
 	setSpeed(100, MOTOR_1);
@@ -71,16 +71,16 @@ void initMotor()
 	
 	chThdSleepMilliseconds(2000);
 	
-	setSpeed(50, MOTOR_1);
-	setSpeed(50, MOTOR_2);
-	setSpeed(50, MOTOR_3);
-	setSpeed(50, MOTOR_4);
+	setSpeed(0, MOTOR_1);
+	setSpeed(0, MOTOR_2);
+	setSpeed(0, MOTOR_3);
+	setSpeed(0, MOTOR_4);
 	chThdSleepMilliseconds(1000);
 
 }
 
 void setSpeed(int speed, int motor)
 {	
-	pwmEnableChannel(&PWMD2, motor, PWM_PERCENTAGE_TO_WIDTH(&PWMD2, speed*100));
+	pwmEnableChannel(&PWMD2, motor, PWM_PERCENTAGE_TO_WIDTH(&PWMD2, (speed/2+50)*100));
 }
 

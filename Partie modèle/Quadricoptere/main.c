@@ -44,10 +44,10 @@ static msg_t ThreadMotor( void *arg )
 	
 	while(TRUE)
 	{
-		setSpeed(50, MOTOR_1);
-		setSpeed(50, MOTOR_2);
-		setSpeed(50, MOTOR_3);
-		setSpeed(50, MOTOR_4);
+		setSpeed(0, MOTOR_1);
+		setSpeed(0, MOTOR_2);
+		setSpeed(0, MOTOR_3);
+		setSpeed(0, MOTOR_4);
 		chThdSleepMilliseconds( 5000 );
 		setSpeed(80, MOTOR_1);
 		setSpeed(80, MOTOR_2);

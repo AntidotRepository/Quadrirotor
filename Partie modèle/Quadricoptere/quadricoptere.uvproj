@@ -408,11 +408,6 @@
               <FilePath>.\gyro.c</FilePath>
             </File>
             <File>
-              <FileName>XBee.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\XBee.c</FilePath>
-            </File>
-            <File>
               <FileName>alti.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\alti.c</FilePath>
@@ -421,6 +416,11 @@
               <FileName>battery.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\battery.c</FilePath>
+            </File>
+            <File>
+              <FileName>xbee.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\xbee.c</FilePath>
             </File>
           </Files>
         </Group>

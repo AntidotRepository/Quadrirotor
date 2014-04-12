@@ -21,6 +21,7 @@
 #include "XBee.h"
 #include "alti.h"
 
+
 static const I2CConfig g_i2ccfg = 
 {
 	OPMODE_I2C,
@@ -28,45 +29,63 @@ static const I2CConfig g_i2ccfg =
 	FAST_DUTY_CYCLE_2
 };
 
- SerialConfig uartCfg=
-{
-	 BAUDRATE,									/* Baudrate																	 				*/
-	 0,											 		/* cr1 register values															 */
-	 0,											 		/* cr2 register values															 */
-	 0													/* cr3 register values															 */
-};
-
-
 static WORKING_AREA(waMotor, 128);
 static msg_t ThreadMotor( void *arg )
 {
 	initMotor();
-	
+
 	while(TRUE)
 	{
-		setSpeed(0, MOTOR_1);
-		setSpeed(0, MOTOR_2);
-		setSpeed(0, MOTOR_3);
-		setSpeed(0, MOTOR_4);
+
+		setSpeed(10, MOTOR_1);
+		setSpeed(10, MOTOR_2);
+		setSpeed(10, MOTOR_3);
+		setSpeed(10, MOTOR_4);
 		chThdSleepMilliseconds( 5000 );
-		setSpeed(80, MOTOR_1);
-		setSpeed(80, MOTOR_2);
-		setSpeed(80, MOTOR_3);
-		setSpeed(80, MOTOR_4);
+		setSpeed(20, MOTOR_1);
+		setSpeed(20, MOTOR_2);
+		setSpeed(20, MOTOR_3);
+		setSpeed(20, MOTOR_4);
 		chThdSleepMilliseconds( 5000 );
+//		setSpeed(50, MOTOR_1);
+//		setSpeed(50, MOTOR_2);
+//		setSpeed(50, MOTOR_3);
+//		setSpeed(50, MOTOR_4);
+//		chThdSleepMilliseconds( 5000 );
+//		setSpeed(70, MOTOR_1);
+//		setSpeed(70, MOTOR_2);
+//		setSpeed(70, MOTOR_3);
+//		setSpeed(70, MOTOR_4);
+//		chThdSleepMilliseconds( 5000 );
 	}
 }
 
-static WORKING_AREA(waCom, 128);
-static msg_t ThreadCom( void *arg )
+static WORKING_AREA(waComSnd, 256);
+static msg_t ThreadComSnd( void *arg )
 {
 	DATA_COMM data;
-	char bufSend[40]={0};
-	//SD2						T015R046L013A01245B095.26S051.01         "T000R000L000A00000B000000000S00000000000"
-	palSetPadMode(GPIOA, 2, PAL_MODE_ALTERNATE(7));
-	palSetPadMode(GPIOA, 3, PAL_MODE_ALTERNATE(7));
+	
+	while(TRUE)
+	{
+		data.tangage = 15;
+		data.roulis = 46;
+		data.lacet = 13;
+		data.altitude = 1245;
+		data.battery = 95;
+		data.signal = 51;
 
-	sdStart(&SD2, &uartCfg);
+		sendData ( &data );
+
+		chThdSleepMilliseconds( 50 );
+	}
+}
+
+static WORKING_AREA(waComRcv, 128);
+static msg_t ThreadComRcv( void *arg )
+{
+	DATA_COMM data;
+	char bufRcv[40]={0};
+
 	
 	//initXBee();
 	
@@ -81,15 +100,14 @@ static msg_t ThreadCom( void *arg )
 
 //		sendData ( &data );
 			
-		sprintf(bufSend, "T%03dR%03dL%03dA%05dB%03dS%03d", data.tangage, data.roulis, data.lacet, data.altitude, data.battery, data.signal);
+		//sprintf(bufSend, "T%03dR%03dL%03dA%05dB%03dS%03d", data.tangage, data.roulis, data.lacet, data.altitude, data.battery, data.signal);
 		//sprintf(bufSend, "test");
-		sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
+		//sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
 		
 
 		chThdSleepMilliseconds( 10 );
 	}
 }
-
 
 /*
  * Application entry point.
@@ -112,13 +130,14 @@ int main(void) {
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &g_i2ccfg);
 
-	
+	initXBee();
+
 //	initGyro();
   
 //	initAlti();
 	
 	chThdCreateStatic(waMotor, sizeof(waMotor), NORMALPRIO, ThreadMotor, NULL);
-	chThdCreateStatic(waCom, sizeof(waCom), NORMALPRIO, ThreadCom, NULL);
+	chThdCreateStatic(waComSnd, sizeof(waComSnd), NORMALPRIO, ThreadComSnd, NULL);
 	
 	while(1)
 	{

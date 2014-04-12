@@ -53,10 +53,10 @@ void sendData (DATA_COMM *data );
 DATA_COMM* rcvData( void );
 float getSignal( void );
 
-int getTangage();
-int getRoulis();
-int getLacet();
+//int getTangage();
+//int getRoulis();
+//int getLacet();
 //int getAltitude();
-float getBattery();
+//float getBattery();
 
 #endif //XBEE_H

@@ -50,33 +50,26 @@ static PWMConfig pwmMotor =
 
 void initMotor()
 {
-	pwmStart(&PWMD2, &pwmMotor);
-	
 	palSetPadMode(GPIOB, GPIOB_PIN12, PAL_MODE_OUTPUT_PUSHPULL);
 	palSetPadMode(GPIOB, GPIOB_PIN13, PAL_MODE_OUTPUT_PUSHPULL);
 	palSetPadMode(GPIOB, GPIOB_PIN14, PAL_MODE_OUTPUT_PUSHPULL);
 	palSetPadMode(GPIOB, GPIOB_PIN15, PAL_MODE_OUTPUT_PUSHPULL);
+	
+	pwmStart(&PWMD2, &pwmMotor);
 	
 	// initialization sequence
 	setSpeed(0, MOTOR_1);
 	setSpeed(0, MOTOR_2);
 	setSpeed(0, MOTOR_3);
 	setSpeed(0, MOTOR_4);
-	chThdSleepMilliseconds(2000);
 	
+	chThdSleepMilliseconds(3000);
 	setSpeed(100, MOTOR_1);
 	setSpeed(100, MOTOR_2);
 	setSpeed(100, MOTOR_3);
 	setSpeed(100, MOTOR_4);
 	
-	chThdSleepMilliseconds(2000);
-	
-	setSpeed(0, MOTOR_1);
-	setSpeed(0, MOTOR_2);
-	setSpeed(0, MOTOR_3);
-	setSpeed(0, MOTOR_4);
-	chThdSleepMilliseconds(1000);
-
+	chThdSleepMilliseconds(3000);
 }
 
 void setSpeed(int speed, int motor)

@@ -50,34 +50,37 @@ void initXBee()
 void sendData ( DATA_COMM *data )
 {
 	char bufSend[40]={0};
+
 	sprintf(bufSend, "T%03dR%03dL%03dA%05dB%03dS%03d", data->tangage, data->roulis, data->lacet, data->altitude, data->battery, data->signal);
 	sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
 }
 
-//DATA_COMM* rcvData()
-//{	
-//	int i = 0;
-//	int j = 0;
-//	DATA_COMM *data = NULL;
-//	
-//	char bufRead[]="T000R000L000A00000B000S000";
-//	char bufFinalString[]="T000R000L000A00000B000S000";
-//	
-//	sdRead(&SD2, (uint8_t*)bufRead, strlen(bufRead));
-//	
-//	while(bufRead[i] != 'T')
-//	{
-//		i++;
-//	}
-//	
-//	for ( j = 0; j<strlen(bufRead); j++)
-//	{
-//		bufFinalString[j] = bufRead[(j+i)%strlen(bufRead)];
-//		i++;
-//	}
-//	
-//	scanf(bufFinalString, "T%03dR%03dL%03dA%05dB%06.2fS%06.2f", data->tangage, data->roulis, data->lacet, data->altitude, data->battery, data->signal);
+DATA_COMM rcvData()
+{	
+	int i = 0;
+	int j = 0;
+	DATA_COMM data;
+	int retSscanf = 0;
+	char bufRead[] = {'T','0','1','5','R','0','4','6','L','0','1','3','A','0','1','2','4','5','B','0','9','5','S','0','5','1','\0'};
+	char bufFinalString[] = {'T','0','1','5','R','0','4','6','L','0','1','3','A','0','1','2','4','5','B','0','9','5','S','0','5','1','\0'};
+	do
+	{
+		
+		sdReadTimeout(&SD2, (uint8_t*)bufRead, (size_t)strlen(bufRead)-1, (systime_t)TIME_INFINITE); 
+		
+		while(bufRead[i] != 'T')
+		{
+			i++;
+		}
+		
+		for ( j = 0; j<strlen(bufRead); j++)
+		{
+			bufFinalString[j] = bufRead[(j+i)%strlen(bufRead)];
+		}
+		
+		sscanf(bufFinalString, "T%dR%dL%dA%dB%dS%d", &data.tangage, &data.roulis, &data.lacet, &data.altitude, &data.battery, &data.signal);
 
-//	return data;
-//}
+}while(retSscanf !=6);
+	return data;
+}
 

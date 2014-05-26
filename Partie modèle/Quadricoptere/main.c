@@ -75,37 +75,18 @@ static msg_t ThreadComSnd( void *arg )
 		data.signal = 51;
 
 		sendData ( &data );
-
-		chThdSleepMilliseconds( 50 );
+		chThdSleepMilliseconds( 100 );
 	}
 }
 
-static WORKING_AREA(waComRcv, 128);
+static WORKING_AREA(waComRcv, 256);
 static msg_t ThreadComRcv( void *arg )
 {
-	DATA_COMM data;
-	char bufRcv[40]={0};
-
-	
-	//initXBee();
 	
 	while(TRUE)
 	{
-		data.tangage = 15;
-		data.roulis = 46;
-		data.lacet = 13;
-		data.altitude = 1245;
-		data.battery = 95;
-		data.signal = 51;
-
-//		sendData ( &data );
-			
-		//sprintf(bufSend, "T%03dR%03dL%03dA%05dB%03dS%03d", data.tangage, data.roulis, data.lacet, data.altitude, data.battery, data.signal);
-		//sprintf(bufSend, "test");
-		//sdWrite(&SD2, (uint8_t*)bufSend, strlen(bufSend));
-		
-
-		chThdSleepMilliseconds( 10 );
+		rcvData();
+		chThdSleepMilliseconds( 100 );
 	}
 }
 
@@ -113,8 +94,6 @@ static msg_t ThreadComRcv( void *arg )
  * Application entry point.
  */
 int main(void) {
-	
-	long temp = 0;
 	
 	halInit();
 	chSysInit();
@@ -129,7 +108,7 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &g_i2ccfg);
-
+	
 	initXBee();
 
 //	initGyro();
@@ -138,7 +117,8 @@ int main(void) {
 	
 	chThdCreateStatic(waMotor, sizeof(waMotor), NORMALPRIO, ThreadMotor, NULL);
 	chThdCreateStatic(waComSnd, sizeof(waComSnd), NORMALPRIO, ThreadComSnd, NULL);
-	
+	chThdCreateStatic(waComRcv, sizeof(waComRcv), NORMALPRIO, ThreadComRcv, NULL);
+
 	while(1)
 	{
 //		getAngle( AXIS_X );

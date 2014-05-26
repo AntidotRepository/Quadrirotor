@@ -318,3 +318,517 @@ Verify OK.
 Application running ...
 Clean started: Project: 'quadricoptere'
    deleting intermediate output files for target 'Target 1'
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling motor.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling gyro.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling alti.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling battery.c...
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+compiling board.c...
+compiling chlists.c...
+compiling chschd.c...
+compiling chsem.c...
+compiling chsys.c...
+compiling chthreads.c...
+compiling chvt.c...
+compiling chcond.c...
+compiling chdebug.c...
+compiling chdynamic.c...
+compiling chevents.c...
+compiling chheap.c...
+compiling chmboxes.c...
+compiling chmemcore.c...
+compiling chmempools.c...
+compiling chmsg.c...
+compiling chmtx.c...
+compiling chqueues.c...
+compiling chregistry.c...
+compiling hal.c...
+compiling pal.c...
+compiling pwm.c...
+compiling i2c.c...
+compiling serial.c...
+compiling icu.c...
+compiling pal_lld.c...
+compiling hal_lld.c...
+compiling stm32_dma.c...
+compiling pwm_lld.c...
+compiling i2c_lld.c...
+compiling serial_lld.c...
+compiling icu_lld.c...
+compiling chcore.c...
+compiling chcore_v7m.c...
+compiling nvic.c...
+assembling chcoreasm_v7m.s...
+assembling cstartup.s...
+assembling vectors.s...
+linking...
+Program Size: Code=14448 RO-data=900 RW-data=76 ZI-data=4964  
+".\quadricoptere.axf" - 0 Errors, 5 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(45): error:  #167: argument of type "DATA_COMM *" is incompatible with parameter of type "msg_t *"
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(45): error:  #167: argument of type "DATA_COMM" is incompatible with parameter of type "msg_t *"
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(45): error:  #167: argument of type "msg_t" is incompatible with parameter of type "msg_t *"
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(45): error:  #171: invalid type conversion
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(41): warning:  #550-D: variable "data" was set but never used
+main.c(100): error:  #268: declaration may not appear after executable statement in block
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(41): warning:  #550-D: variable "data" was set but never used
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(96): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15640 RO-data=900 RW-data=76 ZI-data=4748  
+".\quadricoptere.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15592 RO-data=900 RW-data=76 ZI-data=4748  
+".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15568 RO-data=900 RW-data=76 ZI-data=4748  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15132 RO-data=900 RW-data=24 ZI-data=4440  
+".\quadricoptere.axf" - 0 Errors, 5 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(68): warning:  #177-D: variable "waComSnd" was declared but never referenced
+main.c(69): warning:  #177-D: function "ThreadComSnd" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15072 RO-data=900 RW-data=24 ZI-data=4136  
+".\quadricoptere.axf" - 0 Errors, 7 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(94): error:  #20: identifier "data" is undefined
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(68): warning:  #177-D: variable "waComSnd" was declared but never referenced
+main.c(69): warning:  #177-D: function "ThreadComSnd" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 6 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(68): warning:  #177-D: variable "waComSnd" was declared but never referenced
+main.c(69): warning:  #177-D: function "ThreadComSnd" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=13908 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 7 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(90): warning:  #177-D: variable "data" was declared but never referenced
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(68): warning:  #177-D: variable "waComSnd" was declared but never referenced
+main.c(69): warning:  #177-D: function "ThreadComSnd" was declared but never referenced
+linking...
+Program Size: Code=13892 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 7 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 0 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(69): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+xbee.c(76): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+xbee.c(78): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(76): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+xbee.c(78): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4096  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(90): warning:  #177-D: variable "data" was declared but never referenced
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+main.c(68): warning:  #177-D: variable "waComSnd" was declared but never referenced
+main.c(69): warning:  #177-D: function "ThreadComSnd" was declared but never referenced
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(83): error:  #20: identifier "retSscanf" is undefined
+".\quadricoptere.axf" - 1 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=13916 RO-data=900 RW-data=24 ZI-data=4224  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(90): warning:  #177-D: variable "data" was declared but never referenced
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(38): warning:  #177-D: variable "waMotor" was declared but never referenced
+main.c(39): warning:  #177-D: function "ThreadMotor" was declared but never referenced
+linking...
+Program Size: Code=13980 RO-data=900 RW-data=24 ZI-data=4528  
+".\quadricoptere.axf" - 0 Errors, 5 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15592 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15592 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 4 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(69): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(63): warning:  #550-D: variable "retSscanf" was set but never used
+linking...
+Program Size: Code=15608 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(65): warning:  #550-D: variable "bufFinalString" was set but never used
+linking...
+Program Size: Code=13892 RO-data=628 RW-data=76 ZI-data=4780  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15592 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 1 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(63): warning:  #177-D: variable "retSscanf" was declared but never referenced
+linking...
+Program Size: Code=15620 RO-data=900 RW-data=76 ZI-data=4876  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(90): warning: C4017W: data may be used before being set
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+linking...
+Program Size: Code=15592 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+linking...
+Program Size: Code=15596 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling xbee.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+xbee.c(63): warning:  #177-D: variable "retSscanf" was declared but never referenced
+linking...
+Program Size: Code=15612 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+linking...
+Program Size: Code=15616 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+linking...
+Program Size: Code=15616 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 2 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(121): error:  #268: declaration may not appear after executable statement in block
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+".\quadricoptere.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+GLOBALES.h(33): warning:  #1215-D: #warning directive: vérifier ce registre
+main.c(27): warning:  #177-D: variable "b_Comm" was declared but never referenced
+main.c(107): warning: C4017W: msg may be used before being set
+linking...
+Program Size: Code=15628 RO-data=900 RW-data=76 ZI-data=5132  
+".\quadricoptere.axf" - 0 Errors, 3 Warning(s).
+Load "D:\\Bibliothèque\\Mes documents\\Programmation\\Quadricoptère\\Partie modèle\\Quadricoptere\\quadricoptere.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

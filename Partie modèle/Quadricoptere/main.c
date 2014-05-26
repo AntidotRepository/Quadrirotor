@@ -21,6 +21,12 @@
 #include "XBee.h"
 #include "alti.h"
 
+#define MAILBOX_SIZE	1
+
+static Mailbox mb_Comm;
+static msg_t b_Comm[MAILBOX_SIZE];
+
+MemoryPool comPool;
 
 static const I2CConfig g_i2ccfg = 
 {
@@ -32,21 +38,20 @@ static const I2CConfig g_i2ccfg =
 static WORKING_AREA(waMotor, 128);
 static msg_t ThreadMotor( void *arg )
 {
+	DATA_COMM *data;
+	msg_t msg;
+	
 	initMotor();
 
 	while(TRUE)
 	{
+		chMBFetch(&mb_Comm, &msg, TIME_INFINITE);
+		data = (DATA_COMM*)msg;
 
-		setSpeed(10, MOTOR_1);
-		setSpeed(10, MOTOR_2);
-		setSpeed(10, MOTOR_3);
-		setSpeed(10, MOTOR_4);
-		chThdSleepMilliseconds( 5000 );
-		setSpeed(20, MOTOR_1);
-		setSpeed(20, MOTOR_2);
-		setSpeed(20, MOTOR_3);
-		setSpeed(20, MOTOR_4);
-		chThdSleepMilliseconds( 5000 );
+		setSpeed(data->battery, MOTOR_1);
+		setSpeed(data->battery, MOTOR_2);
+		setSpeed(data->battery, MOTOR_3);
+		setSpeed(data->battery, MOTOR_4);
 //		setSpeed(50, MOTOR_1);
 //		setSpeed(50, MOTOR_2);
 //		setSpeed(50, MOTOR_3);
@@ -60,7 +65,7 @@ static msg_t ThreadMotor( void *arg )
 	}
 }
 
-static WORKING_AREA(waComSnd, 256);
+static WORKING_AREA(waComSnd, 128);
 static msg_t ThreadComSnd( void *arg )
 {
 	DATA_COMM data;
@@ -79,13 +84,17 @@ static msg_t ThreadComSnd( void *arg )
 	}
 }
 
-static WORKING_AREA(waComRcv, 256);
+static WORKING_AREA(waComRcv, 512);
 static msg_t ThreadComRcv( void *arg )
 {
-	
+	DATA_COMM *data = NULL;
+	msg_t msg;
 	while(TRUE)
 	{
-		rcvData();
+		*data = rcvData();
+		
+		msg = (msg_t)data;
+		chMBPost(&mb_Comm, msg, TIME_INFINITE);
 		chThdSleepMilliseconds( 100 );
 	}
 }
@@ -94,6 +103,8 @@ static msg_t ThreadComRcv( void *arg )
  * Application entry point.
  */
 int main(void) {
+	
+	msg_t msg;
 	
 	halInit();
 	chSysInit();
@@ -108,6 +119,8 @@ int main(void) {
 	i2cInit();
 	i2cObjectInit(&I2CD1);
 	i2cStart(&I2CD1, &g_i2ccfg);
+	
+	chMBInit(&mb_Comm, (msg_t*)msg, sizeof(msg));
 	
 	initXBee();
 

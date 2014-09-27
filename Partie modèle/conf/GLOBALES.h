@@ -1,7 +1,7 @@
 #ifndef GLOBALES_H
 #define GLOBALES_H
 
-
+#include "chmtx.h"
 
 // ------------------------------------
 // -------------	Motors  -------------
@@ -44,7 +44,16 @@
 // ------------------------------------
 // ----------  Communication ----------
 // ------------------------------------
+<<<<<<< HEAD:Partie mod√®le/conf/GLOBALES.h
 	#define BAUDRATE							19200		// Changer Áa ‡ 19200 pour Èviter que Áa coupe aprËs 5 min de com!
+=======
+	#define BAUDRATE							57600
+	
+// ------------------------------------
+// ------------- Mutexs ---------------
+// ------------------------------------
+
+>>>>>>> Quadrirotor/master:Partie mod√®le/Quadricoptere/GLOBALES.h
 
 #endif // GLOBALES_H
 

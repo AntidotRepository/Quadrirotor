@@ -140,7 +140,11 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <Name>-U-O8398 -O8398 -S3 -C0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC168000000 -TP21 -TDS8053 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128.FLM -FS08000000 -FL020000 -FP0($$Device:STM32L152RB$Flash\STM32L1xx_128.FLM)</Name>
+=======
+          <Name>-U-O8431 -O8431 -S8 -C0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC168000000 -TP21 -TDS8053 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32L15x_128 -FS08000000 -FL020000</Name>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -148,31 +152,117 @@
           <Name>-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000 -FP0($$Device:STM32L152RB$Flash\STM32L1xx_128.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <Breakpoint/>
+=======
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>51</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218176</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>D:\BibliothÃ¨que\Mes documents\Programmation\QuadricoptÃ¨re\Partie modÃ¨le\Quadricoptere\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>98</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218288</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>D:\BibliothÃ¨que\Mes documents\Programmation\QuadricoptÃ¨re\Partie modÃ¨le\Quadricoptere\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>96</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218276</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>D:\BibliothÃ¨que\Mes documents\Programmation\QuadricoptÃ¨re\Partie modÃ¨le\Quadricoptere\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>231</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>D:\Bibliothèque\Mes documents\Programmation\Quadricoptère\Partie modèle\Quadricoptere\OS\ports\RVCT\ARMCMx\STM32L1xx\vectors.s</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+      </Breakpoint>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <ItemText>pressure,0x0A</ItemText>
+=======
+          <ItemText>bufRead</ItemText>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <ItemText>pressure0,0x0A</ItemText>
+=======
+          <ItemText>retSscanf</ItemText>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <ItemText>altitude,0x0A</ItemText>
+=======
+          <ItemText>sscanf</ItemText>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <ItemText>tabAlti</ItemText>
+=======
+          <ItemText>data</ItemText>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
           <ItemText>(variables.B5+8)&gt;&gt;4,0x0A</ItemText>
         </Ww>
         <Ww>
@@ -233,9 +323,18 @@
         <Ww>
           <count>16</count>
           <WinNumber>1</WinNumber>
+=======
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
           <ItemText>data</ItemText>
         </Ww>
       </WatchWindow1>
+      <MemoryWindow1>
+        <Mm>
+          <WinNumber>1</WinNumber>
+          <SubType>0</SubType>
+          <ItemText>0xffff</ItemText>
+        </Mm>
+      </MemoryWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -288,10 +387,15 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>37</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>217</TopLine>
       <CurrentLine>225</CurrentLine>
+=======
+      <TopLine>59</TopLine>
+      <CurrentLine>52</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\conf\alti.c</PathWithFileName>
       <FilenameWithoutPath>alti.c</FilenameWithoutPath>
@@ -304,10 +408,15 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>62</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
+=======
+      <TopLine>36</TopLine>
+      <CurrentLine>53</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\conf\battery.c</PathWithFileName>
       <FilenameWithoutPath>battery.c</FilenameWithoutPath>
@@ -370,8 +479,13 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>45</TopLine>
       <CurrentLine>53</CurrentLine>
+=======
+      <TopLine>63</TopLine>
+      <CurrentLine>69</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\conf\XBee.c</PathWithFileName>
       <FilenameWithoutPath>XBee.c</FilenameWithoutPath>
@@ -408,7 +522,11 @@
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <ColumnNumber>25</ColumnNumber>
+=======
+      <ColumnNumber>30</ColumnNumber>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
@@ -480,10 +598,15 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>66</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>164</TopLine>
       <CurrentLine>165</CurrentLine>
+=======
+      <TopLine>1</TopLine>
+      <CurrentLine>13</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\kernel\src\chdebug.c</PathWithFileName>
       <FilenameWithoutPath>chdebug.c</FilenameWithoutPath>
@@ -498,8 +621,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>197</TopLine>
+      <CurrentLine>203</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\kernel\src\chmboxes.c</PathWithFileName>
       <FilenameWithoutPath>chmboxes.c</FilenameWithoutPath>
@@ -530,8 +653,13 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
+=======
+      <TopLine>64</TopLine>
+      <CurrentLine>65</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\kernel\src\chmsg.c</PathWithFileName>
       <FilenameWithoutPath>chmsg.c</FilenameWithoutPath>
@@ -718,7 +846,7 @@
       <GroupNumber>3</GroupNumber>
       <FileNumber>27</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -829,7 +957,27 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <PathWithFileName>.\os\hal\src\serial.c</PathWithFileName>
+=======
+      <PathWithFileName>.\OS\hal\src\i2c.c</PathWithFileName>
+      <FilenameWithoutPath>i2c.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>34</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\OS\hal\src\serial.c</PathWithFileName>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <FilenameWithoutPath>serial.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -880,10 +1028,17 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <ColumnNumber>29</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>872</TopLine>
       <CurrentLine>888</CurrentLine>
+=======
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\hal\platforms\STM32\I2Cv1\i2c_lld.c</PathWithFileName>
       <FilenameWithoutPath>i2c_lld.c</FilenameWithoutPath>
@@ -914,8 +1069,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\hal\platforms\STM32\GPIOv2\pal_lld.c</PathWithFileName>
       <FilenameWithoutPath>pal_lld.c</FilenameWithoutPath>
@@ -1002,8 +1157,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>69</TopLine>
+      <CurrentLine>70</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\ports\common\ARMCMx\nvic.c</PathWithFileName>
       <FilenameWithoutPath>nvic.c</FilenameWithoutPath>
@@ -1066,8 +1221,13 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD:Partie modèle/Quadricoptere.uvopt
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
+=======
+      <TopLine>213</TopLine>
+      <CurrentLine>223</CurrentLine>
+>>>>>>> Quadrirotor/master:Partie modèle/Quadricoptere/quadricoptere.uvopt
       <bDave2>0</bDave2>
       <PathWithFileName>.\os\ports\RVCT\ARMCMx\chcoreasm_v7m.s</PathWithFileName>
       <FilenameWithoutPath>chcoreasm_v7m.s</FilenameWithoutPath>
